@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEERAN IT Training - Best IT Courses in Chennai @ ₹2,500/month</title>
+    <meta name="description" content="Learn Java, DevOps, ReactJS, Full Stack Development in Chennai. Expert training, placement assistance, affordable fees. Call +91 90925 20907">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 10px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .logo span {
+            color: #2ecc71;
+        }
+        
+        .tagline {
+            font-size: 18px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .price-badge {
+            background: #2ecc71;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 10px 0;
+        }
+        
+        /* Hero Image */
+        .hero-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Address Bar */
+        .address-bar {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            border-bottom: 3px solid #3498db;
+        }
+        
+        .address-bar span {
+            display: block;
+            margin: 5px 0;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title {
+            color: #2c3e50;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .section-title span {
+            color: #3498db;
+        }
+        
+        /* Courses */
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .course-title {
+            color: #2c3e50;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .course-features {
+            list-style: none;
+            margin: 15px 0;
+        }
+        
+        .course-features li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .course-features li:before {
+            content: "✓";
+            color: #2ecc71;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .course-price {
+            color: #e74c3c;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+        
+        .cta-button {
+            display: block;
+            background: #e74c3c;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #c0392b;
+        }
+        
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+        
+        .feature-text {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Contact Info */
+        .contact-info {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            font-size: 20px;
+            margin-right: 15px;
+            color: #3498db;
+            min-width: 30px;
+        }
+        
+        /* WhatsApp Button */
+        .whatsapp-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            gap: 10px;
+        }
+        
+        .whatsapp-icon {
+            font-size: 24px;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .footer-logo {
+            color: #2c3e50;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .footer-logo span {
+            color: #3498db;
+        }
+        
+        /* Responsive */
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-image {
+                height: 150px;
+                font-size: 20px;
+            }
+            
+            .section {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">MEER<span>AN</span> IT</div>
+            <div class="tagline">Best IT Training Institute in Chennai</div>
+            <div class="price-badge">Only ₹2,500/month</div>
+            <p>8-Month Program | Guaranteed Placement Assistance</p>
+        </div>
+        
+        <!-- Hero Image -->
+        <div class="hero-image">
+            Transform Your IT Career<br>with Expert Training
+        </div>
+        
+        <!-- Address -->
+        <div class="address-bar">
+            <span>📍 Palavakkam, ECR, Chennai</span>
+            <span>📱 +91 90925 20907 | 📧 nowrose@meeranit.edu</span>
+        </div>
+        
+        <!-- Main CTA -->
+        <div class="section" style="text-align: center; background: #f8f9fa;">
+            <a href="https://wa.me/919092520907?text=Hi%20MEERAN%20IT%20Team%2C%20I'm%20interested%20in%20your%20IT%20courses.%20Please%20share%20more%20details." 
+               class="whatsapp-button" target="_blank">
+                <span class="whatsapp-icon">💬</span>
+                <span>Chat on WhatsApp for Details</span>
+            </a>
+            <p style="margin-top: 15px; color: #666;">Quick response within 15 minutes</p>
+        </div>
+        
+        <!-- Courses -->
+        <div class="section">
+            <h2 class="section-title">Our <span>Courses</span></h2>
+            
+            <!-- Course 1 -->
+            <div class="course-card">
+                <div class="course-title">☕ Java Full Stack Development</div>
+                <ul class="course-features">
+                    <li>Java 21+ with Spring Boot</li>
+                    <li>ReactJS Frontend Development</li>
+                    <li>MySQL & MongoDB Databases</li>
+                    <li>RESTful API Development</li>
+                    <li>4 Real-time Projects</li>
+                    <li>8 Months Duration</li>
+                </ul>
+                <div class="course-price">₹20,000 (₹2,500/month)</div>
+                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20Java%20Full%20Stack%20course%20for%20₹20%2C000" 
+                   class="cta-button" target="_blank">
+                    Enroll Now
+                </a>
+            </div>
+            
+            <!-- Course 2 -->
+            <div class="course-card">
+                <div class="course-title">⚛️ DevOps Engineering</div>
+                <ul class="course-features">
+                    <li>Docker & Kubernetes</li>
+                    <li>Jenkins CI/CD Pipeline</li>
+                    <li>AWS Cloud Services</li>
+                    <li>Infrastructure as Code</li>
+                    <li>Monitoring with Prometheus</li>
+                    <li>6 Months Duration</li>
+                </ul>
+                <div class="course-price">₹25,000 (₹4,166/month)</div>
+                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20DevOps%20Engineering%20course%20for%20₹25%2C000" 
+                   class="cta-button" target="_blank">
+                    Enroll Now
+                </a>
+            </div>
+            
+            <!-- Course 3 -->
+            <div class="course-card">
+                <div class="course-title">🚀 Complete Full Stack (Java + DevOps + ReactJS)</div>
+                <ul class="course-features">
+                    <li>Java Backend Development</li>
+                    <li>ReactJS Frontend Mastery</li>
+                    <li>DevOps & Cloud Deployment</li>
+                    <li>Microservices Architecture</li>
+                    <li>6 Capstone Projects</li>
+                    <li>10 Months Duration</li>
+                </ul>
+                <div class="course-price">₹35,000 (₹3,500/month)</div>
+                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20Complete%20Full%20Stack%20course%20for%20₹35%2C000" 
+                   class="cta-button" target="_blank">
+                    Enroll Now
+                </a>
+            </div>
+        </div>
+        
+        <!-- Why Choose Us -->
+        <div class="section">
+            <h2 class="section-title">Why Choose <span>Us</span></h2>
+            
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">👨‍🏫</div>
+                    <div class="feature-text">Expert Faculty<br>10+ Years Experience</div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💰</div>
+                    <div class="feature-text">Affordable Pricing<br>80% Cheaper</div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">💼</div>
+                    <div class="feature-text">Placement Assistance<br>85% Placement Rate</div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🏫</div>
+                    <div class="feature-text">ECR Location<br>Easy Accessibility</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="section">
+            <h2 class="section-title">Contact <span>Us</span></h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <strong>Address:</strong><br>
+                        Palavakkam, ECR, Chennai<br>
+                        1/97 Quaithemilleth 2nd Cross Street<br>
+                        Landmark: Periyar Signal, TNTJ Marcus
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <strong>Phone:</strong><br>
+                        +91 90925 20907<br>
+                        <small>(WhatsApp Available)</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <strong>Email:</strong><br>
+                        nowrose@meeranit.edu<br>
+                        contact@meeranit.edu
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div>
+                        <strong>Working Hours:</strong><br>
+                        Mon-Sat: 9 AM - 9 PM<br>
+                        Sunday: 10 AM - 6 PM
+                    </div>
+                </div>
+            </div>
+            
+            <a href="tel:+919092520907" class="cta-button" style="background: #2ecc71;">
+                📞 Call Now: +91 90925 20907
+            </a>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-logo">MEER<span>AN</span> IT</div>
+            <p>Making quality IT education accessible to everyone</p>
+            <p style="margin-top: 15px; font-size: 12px;">
+                © 2024 MEERAN IT Training Institute<br>
+                Palavakkam, ECR, Chennai | +91 90925 20907
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // WhatsApp sharing enhancement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click tracking for WhatsApp buttons
+            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
+            whatsappLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // You can add analytics tracking here
+                    console.log('WhatsApp link clicked:', this.href);
+                });
+            });
+            
+            // Make phone numbers clickable on mobile
+            const phoneNumbers = document.querySelectorAll('a[href^="tel:"]');
+            phoneNumbers.forEach(phone => {
+                phone.addEventListener('click', function(e) {
+                    if (window.innerWidth > 768) {
+                        e.preventDefault();
+                        alert('Please use WhatsApp or email for desktop enquiries');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
