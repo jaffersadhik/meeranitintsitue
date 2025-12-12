@@ -3,483 +3,1916 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEERAN IT Training - Best IT Courses in Chennai @ ₹2,500/month</title>
-    <meta name="description" content="Learn Java, DevOps, ReactJS, Full Stack Development in Chennai. Expert training, placement assistance, affordable fees. Call +91 90925 20907">
+    <title>SMSConnect India - SMS Solutions Proprietorship Startup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Base Styles (Mobile First) */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        :root {
+            /* Light Theme Variables */
+            --primary-color: #2563eb;
+            --secondary-color: #0ea5e9;
+            --accent-color: #f59e0b;
+            --startup-green: #10b981;
+            --proprietorship-color: #8b5cf6;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            
+            /* Dark Theme Variables - Default */
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --dark-text: #f1f5f9;
+            --dark-text-light: #cbd5e1;
+            --dark-border: #334155;
+            --dark-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        /* Dark Mode Classes */
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode header {
+            background-color: var(--dark-card);
+            border-bottom-color: var(--dark-border);
+        }
+        
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+        
+        body.dark-mode .services,
+        body.dark-mode .contact {
+            background-color: var(--dark-bg);
+        }
+        
+        body.dark-mode .service-card,
+        body.dark-mode .startup-story,
+        body.dark-mode .timeline-content {
+            background-color: var(--dark-card);
+            border-color: var(--dark-border);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .about-startup {
+            background-color: #1e293b;
+        }
+        
+        body.dark-mode footer {
+            background-color: #0f172a;
+            border-top-color: var(--dark-border);
+        }
+        
+        body.dark-mode .logo h1 {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .section-title h2 {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .section-title p {
+            color: var(--dark-text-light);
+        }
+        
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea,
+        body.dark-mode .form-group select {
+            background-color: #334155;
+            border-color: #475569;
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .form-group input:focus,
+        body.dark-mode .form-group textarea:focus,
+        body.dark-mode .form-group select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+        }
+        
+        body.dark-mode .footer-links ul li a {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .copyright {
+            border-top-color: #334155;
+            color: #94a3b8;
+        }
+        
+        /* Proprietorship Badge */
+        .proprietorship-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--proprietorship-color), #a78bfa);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .company-structure {
+            background-color: rgba(139, 92, 246, 0.1);
+            border-left: 4px solid var(--proprietorship-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+            transition: background-color 0.3s ease;
+        }
+        
+        body.dark-mode .company-structure {
+            background-color: rgba(139, 92, 246, 0.2);
+        }
+        
+        /* Logo SVG Styling */
+        .logo-svg {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .logo-svg svg {
+            display: block;
+        }
+        
+        /* Mobile logo size */
+        @media (max-width: 767px) {
+            .logo-svg {
+                margin-right: 10px;
+            }
+            
+            .logo-svg svg {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .proprietorship-badge {
+                font-size: 10px;
+                padding: 3px 8px;
+                margin-left: 5px;
+            }
+        }
+        
+        /* Desktop logo size */
+        @media (min-width: 768px) {
+            .logo-svg {
+                margin-right: 15px;
+            }
+            
+            .logo-svg svg {
+                width: 44px;
+                height: 44px;
+            }
+        }
+        
+        /* Dark mode adjustments for SVG */
+        body.dark-mode .logo-svg svg .logo-circle {
+            fill: #1e40af;
+        }
+        
+        body.dark-mode .logo-svg svg .message-bubble {
+            fill: #e2e8f0;
+        }
+        
+        /* Dark mode toggle button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        .theme-toggle .moon-icon {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .sun-icon {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .moon-icon {
+            display: block;
         }
         
         body {
-            background: #f0f2f5;
-            color: #333;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
             line-height: 1.6;
-            padding: 10px;
-            max-width: 100%;
+            font-size: 16px;
             overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
         
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .logo {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .logo span {
-            color: #2ecc71;
-        }
-        
-        .tagline {
-            font-size: 18px;
-            margin-bottom: 15px;
-            opacity: 0.9;
-        }
-        
-        .price-badge {
-            background: #2ecc71;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-size: 24px;
-            font-weight: bold;
-            display: inline-block;
-            margin: 10px 0;
-        }
-        
-        /* Hero Image */
-        .hero-image {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(52, 152, 219, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-align: center;
-            padding: 20px;
+            padding: 0 20px;
         }
         
-        /* Address Bar */
-        .address-bar {
-            background: #2c3e50;
+        .startup-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--startup-green), #34d399);
             color: white;
-            padding: 15px;
-            text-align: center;
+            padding: 6px 16px;
+            border-radius: 20px;
             font-size: 14px;
-            border-bottom: 3px solid #3498db;
-        }
-        
-        .address-bar span {
-            display: block;
-            margin: 5px 0;
-        }
-        
-        /* Sections */
-        .section {
-            padding: 25px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .section-title {
-            color: #2c3e50;
-            font-size: 22px;
-            margin-bottom: 20px;
-            text-align: center;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .section-title span {
-            color: #3498db;
-        }
-        
-        /* Courses */
-        .course-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 4px solid #3498db;
-        }
-        
-        .course-title {
-            color: #2c3e50;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .course-features {
-            list-style: none;
-            margin: 15px 0;
-        }
-        
-        .course-features li {
-            padding: 5px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        
-        .course-features li:before {
-            content: "✓";
-            color: #2ecc71;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        
-        .course-price {
-            color: #e74c3c;
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-            margin: 15px 0;
-        }
-        
-        .cta-button {
-            display: block;
-            background: #e74c3c;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #c0392b;
-        }
-        
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .feature-item {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #3498db;
-        }
-        
-        .feature-text {
-            font-size: 14px;
-            color: #666;
-        }
-        
-        /* Contact Info */
-        .contact-info {
-            background: #2c3e50;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
+            font-weight: 600;
             margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
         }
         
-        .contact-icon {
-            font-size: 20px;
-            margin-right: 15px;
-            color: #3498db;
-            min-width: 30px;
+        .launch-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 5px;
+            font-size: 15px;
         }
         
-        /* WhatsApp Button */
-        .whatsapp-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #25D366;
-            color: white;
-            padding: 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 20px 0;
-            gap: 10px;
+        /* ===== MOBILE STYLES ===== */
+        @media (max-width: 767px) {
+            /* Mobile Header */
+            header {
+                background-color: var(--bg-white);
+                padding: 16px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: var(--shadow-sm);
+                border-bottom: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .logo h1 {
+                font-size: 18px;
+                font-weight: 800;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            .logo span {
+                color: var(--primary-color);
+            }
+            
+            /* Mobile Menu */
+            .mobile-menu-btn {
+                background: none;
+                border: none;
+                color: var(--primary-color);
+                font-size: 22px;
+                cursor: pointer;
+                padding: 5px;
+                display: block;
+                transition: color 0.3s ease;
+            }
+            
+            nav {
+                position: fixed;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-white);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition), background-color 0.3s ease;
+                z-index: 999;
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid var(--border-color);
+            }
+            
+            body.dark-mode nav {
+                background-color: var(--dark-card);
+                border-top-color: var(--dark-border);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            nav ul li {
+                border-bottom: 1px solid var(--border-color);
+                transition: border-color 0.3s ease;
+            }
+            
+            body.dark-mode nav ul li {
+                border-bottom-color: var(--dark-border);
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            nav ul li a {
+                display: block;
+                color: var(--text-dark);
+                text-decoration: none;
+                padding: 16px 20px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: var(--transition);
+            }
+            
+            nav ul li a:hover {
+                background-color: #f0f9ff;
+                color: var(--primary-color);
+                padding-left: 25px;
+            }
+            
+            body.dark-mode nav ul li a:hover {
+                background-color: #1e293b;
+            }
+            
+            /* Mobile Hero */
+            .hero {
+                padding: 50px 0 40px;
+                background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                transition: background 0.3s ease;
+            }
+            
+            .hero::before {
+                content: "";
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: rgba(37, 99, 235, 0.05);
+                top: -100px;
+                right: -100px;
+            }
+            
+            .hero::after {
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: rgba(245, 158, 11, 0.05);
+                bottom: -75px;
+                left: -75px;
+            }
+            
+            body.dark-mode .hero::before {
+                background: rgba(37, 99, 235, 0.1);
+            }
+            
+            body.dark-mode .hero::after {
+                background: rgba(245, 158, 11, 0.1);
+            }
+            
+            .hero-content {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: var(--text-dark);
+                line-height: 1.3;
+                transition: color 0.3s ease;
+            }
+            
+            .hero h2 span {
+                color: var(--primary-color);
+            }
+            
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 25px;
+                color: var(--text-light);
+                padding: 0 10px;
+                transition: color 0.3s ease;
+            }
+            
+            body.dark-mode .hero p {
+                color: var(--dark-text-light);
+            }
+            
+            .startup-highlight {
+                background-color: rgba(16, 185, 129, 0.1);
+                border-left: 4px solid var(--startup-green);
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 0 8px 8px 0;
+                text-align: left;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .startup-highlight {
+                background-color: rgba(16, 185, 129, 0.2);
+            }
+            
+            .cta-button {
+                display: inline-block;
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                color: var(--bg-white);
+                padding: 14px 32px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-md);
+                border: none;
+                cursor: pointer;
+            }
+            
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            }
+            
+            /* Mobile Services */
+            .services {
+                padding: 50px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .section-title {
+                text-align: center;
+                margin-bottom: 35px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+                color: var(--text-dark);
+                margin-bottom: 10px;
+                transition: color 0.3s ease;
+            }
+            
+            .section-title p {
+                color: var(--text-light);
+                padding: 0 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .services-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .service-card {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px 20px;
+                box-shadow: var(--shadow-md);
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease;
+                text-align: center;
+                border: 1px solid var(--border-color);
+            }
+            
+            .service-card.new-offering {
+                border: 2px solid var(--accent-color);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            body.dark-mode .service-card.new-offering {
+                border-color: var(--accent-color);
+            }
+            
+            .new-badge {
+                position: absolute;
+                top: 15px;
+                right: -30px;
+                background-color: var(--accent-color);
+                color: white;
+                padding: 5px 35px;
+                font-size: 12px;
+                font-weight: 700;
+                transform: rotate(45deg);
+                box-shadow: var(--shadow-sm);
+            }
+            
+            .service-card i {
+                font-size: 40px;
+                color: var(--primary-color);
+                margin-bottom: 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .service-card h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            .service-card p {
+                color: var(--text-light);
+                transition: color 0.3s ease;
+            }
+            
+            body.dark-mode .service-card p {
+                color: var(--dark-text-light);
+            }
+            
+            /* Mobile About Startup */
+            .about-startup {
+                padding: 50px 0;
+                background-color: #f0f9ff;
+                transition: background-color 0.3s ease;
+            }
+            
+            .startup-story {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px;
+                box-shadow: var(--shadow-md);
+                margin-top: 25px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .story-point {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: flex-start;
+            }
+            
+            .story-point i {
+                font-size: 20px;
+                color: var(--startup-green);
+                margin-right: 15px;
+                margin-top: 5px;
+                background-color: rgba(16, 185, 129, 0.1);
+                padding: 10px;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .story-point i {
+                background-color: rgba(16, 185, 129, 0.2);
+            }
+            
+            .story-point h3 {
+                transition: color 0.3s ease;
+            }
+            
+            .story-point p {
+                transition: color 0.3s ease;
+            }
+            
+            /* Proprietorship Details */
+            .proprietorship-details {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px;
+                box-shadow: var(--shadow-md);
+                margin-top: 25px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .proprietorship-details h3 {
+                color: var(--proprietorship-color);
+                margin-bottom: 15px;
+                font-size: 22px;
+            }
+            
+            .proprietorship-info {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .proprietor-card {
+                background-color: #f8fafc;
+                border-radius: 10px;
+                padding: 20px;
+                border-left: 4px solid var(--proprietorship-color);
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .proprietor-card {
+                background-color: #1e293b;
+            }
+            
+            .proprietor-card h4 {
+                color: var(--proprietorship-color);
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+            
+            /* Mobile Contact */
+            .contact {
+                padding: 50px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .contact-container {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .contact-info {
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                color: var(--bg-white);
+                padding: 30px 25px;
+                border-radius: 12px;
+                box-shadow: var(--shadow-lg);
+                order: 2;
+            }
+            
+            body.dark-mode .contact-info {
+                background: linear-gradient(135deg, #1e40af, #0c4a6e);
+            }
+            
+            .contact-info h3 {
+                font-size: 24px;
+                margin-bottom: 25px;
+                color: var(--bg-white);
+            }
+            
+            .contact-item {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: flex-start;
+            }
+            
+            .contact-item i {
+                font-size: 20px;
+                margin-right: 12px;
+                margin-top: 3px;
+                color: var(--accent-color);
+                min-width: 24px;
+            }
+            
+            .contact-item h4 {
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: rgba(255, 255, 255, 0.9);
+            }
+            
+            .contact-item p {
+                font-size: 15px;
+                line-height: 1.5;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            
+            .social-links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 50%;
+                color: var(--bg-white);
+                font-size: 16px;
+                transition: var(--transition);
+            }
+            
+            .social-links a:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                transform: translateY(-3px);
+            }
+            
+            /* Mobile Form */
+            .contact-form {
+                order: 1;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                padding: 14px 18px;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 16px;
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+                background-color: var(--bg-white);
+                color: var(--text-dark);
+            }
+            
+            .form-group select {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 15px center;
+                background-size: 16px;
+            }
+            
+            body.dark-mode .form-group select {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            }
+            
+            .form-group input:focus,
+            .form-group textarea:focus,
+            .form-group select:focus {
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            }
+            
+            /* Mobile Footer */
+            footer {
+                background-color: #1f2937;
+                color: var(--bg-white);
+                padding: 40px 0 20px;
+                text-align: center;
+                border-top: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .footer-logo {
+                margin-bottom: 25px;
+            }
+            
+            .footer-logo .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .footer-logo p {
+                color: #d1d5db;
+                font-size: 15px;
+                line-height: 1.6;
+                padding: 0 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .founded-date {
+                display: inline-block;
+                background-color: rgba(16, 185, 129, 0.2);
+                color: #10b981;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+                margin: 15px 0;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .founded-date {
+                background-color: rgba(16, 185, 129, 0.3);
+            }
+            
+            .footer-links {
+                margin-bottom: 30px;
+            }
+            
+            .footer-links h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: var(--accent-color);
+            }
+            
+            .footer-links ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            .footer-links ul li {
+                margin-bottom: 8px;
+            }
+            
+            .footer-links ul li a {
+                color: #d1d5db;
+                text-decoration: none;
+                font-size: 15px;
+                transition: var(--transition), color 0.3s ease;
+            }
+            
+            .footer-links ul li a:hover {
+                color: var(--accent-color);
+            }
+            
+            .copyright {
+                border-top: 1px solid #374151;
+                padding-top: 20px;
+                font-size: 14px;
+                color: #9ca3af;
+                transition: border-color 0.3s ease, color 0.3s ease;
+            }
+            
+            /* Proprietorship Info in Footer */
+            .proprietorship-info-footer {
+                background-color: rgba(139, 92, 246, 0.1);
+                border-radius: 10px;
+                padding: 15px;
+                margin: 20px 0;
+                border-left: 3px solid var(--proprietorship-color);
+            }
+            
+            /* Dark mode toggle mobile positioning */
+            .theme-toggle {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 20px;
+            }
         }
         
-        .whatsapp-icon {
-            font-size: 24px;
+        /* ===== DESKTOP STYLES ===== */
+        @media (min-width: 768px) {
+            body {
+                font-size: 17px;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+            
+            /* Desktop Header */
+            header {
+                background-color: var(--bg-white);
+                padding: 20px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: var(--shadow-md);
+                border-bottom: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .logo h1 {
+                font-size: 26px;
+                font-weight: 800;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            /* Desktop Menu */
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            nav {
+                display: block !important;
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: none;
+                box-shadow: none;
+                border-top: none;
+            }
+            
+            nav ul {
+                display: flex;
+                list-style: none;
+            }
+            
+            nav ul li {
+                border-bottom: none;
+                margin-left: 35px;
+            }
+            
+            nav ul li:first-child {
+                margin-left: 0;
+            }
+            
+            nav ul li a {
+                color: var(--text-dark);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 17px;
+                padding: 8px 0;
+                position: relative;
+                transition: var(--transition);
+            }
+            
+            nav ul li a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: var(--primary-color);
+                transition: var(--transition);
+            }
+            
+            nav ul li a:hover::after {
+                width: 100%;
+            }
+            
+            nav ul li a:hover {
+                background-color: transparent;
+                padding-left: 0;
+                color: var(--primary-color);
+            }
+            
+            /* Desktop Hero */
+            .hero {
+                padding: 100px 0 80px;
+                background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                transition: background 0.3s ease;
+            }
+            
+            .hero::before {
+                width: 400px;
+                height: 400px;
+                top: -200px;
+                right: -200px;
+            }
+            
+            .hero::after {
+                width: 300px;
+                height: 300px;
+                bottom: -150px;
+                left: -150px;
+            }
+            
+            .hero h2 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                color: var(--text-dark);
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+                transition: color 0.3s ease;
+            }
+            
+            .hero p {
+                font-size: 20px;
+                max-width: 850px;
+                margin: 0 auto 35px;
+                color: var(--text-light);
+                line-height: 1.7;
+                padding: 0;
+                transition: color 0.3s ease;
+            }
+            
+            .startup-highlight {
+                max-width: 800px;
+                margin: 30px auto;
+                padding: 25px;
+                font-size: 18px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .cta-button {
+                padding: 18px 45px;
+                font-size: 18px;
+                border-radius: 10px;
+            }
+            
+            .cta-button:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            /* Desktop Services */
+            .services {
+                padding: 90px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .section-title {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            
+            .section-title h2 {
+                font-size: 40px;
+                color: var(--text-dark);
+                margin-bottom: 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .section-title p {
+                color: var(--text-light);
+                max-width: 700px;
+                margin: 0 auto;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 35px;
+            }
+            
+            .service-card {
+                padding: 40px 30px;
+                border-radius: 16px;
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            body.dark-mode .service-card:hover {
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .service-card.new-offering:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2);
+            }
+            
+            body.dark-mode .service-card.new-offering:hover {
+                box-shadow: 0 15px 35px rgba(245, 158, 11, 0.3);
+            }
+            
+            .new-badge {
+                top: 20px;
+                right: -35px;
+                padding: 6px 40px;
+                font-size: 13px;
+            }
+            
+            .service-card i {
+                font-size: 52px;
+                margin-bottom: 25px;
+                transition: color 0.3s ease;
+            }
+            
+            .service-card h3 {
+                font-size: 24px;
+                margin-bottom: 18px;
+                transition: color 0.3s ease;
+            }
+            
+            /* Desktop About Startup */
+            .about-startup {
+                padding: 90px 0;
+                background-color: #f0f9ff;
+                transition: background-color 0.3s ease;
+            }
+            
+            .startup-story {
+                padding: 45px;
+                margin-top: 40px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .story-point {
+                margin-bottom: 30px;
+            }
+            
+            .story-point i {
+                font-size: 24px;
+                padding: 12px;
+                transition: background-color 0.3s ease;
+            }
+            
+            /* Proprietorship Details Desktop */
+            .proprietorship-details {
+                padding: 45px;
+                margin-top: 40px;
+            }
+            
+            .proprietorship-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            /* Desktop Contact */
+            .contact {
+                padding: 90px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: start;
+            }
+            
+            .contact-info {
+                padding: 45px 40px;
+                border-radius: 16px;
+                height: 100%;
+            }
+            
+            .contact-info h3 {
+                font-size: 32px;
+                margin-bottom: 35px;
+            }
+            
+            .contact-item {
+                margin-bottom: 28px;
+            }
+            
+            .contact-item i {
+                font-size: 24px;
+                margin-right: 18px;
+                margin-top: 5px;
+            }
+            
+            .contact-item h4 {
+                font-size: 19px;
+                margin-bottom: 8px;
+            }
+            
+            .contact-item p {
+                font-size: 17px;
+            }
+            
+            .social-links a {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+            
+            .social-links a:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-5px);
+            }
+            
+            /* Desktop Footer */
+            footer {
+                padding: 60px 0 30px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .footer-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                gap: 50px;
+                margin-bottom: 40px;
+                text-align: left;
+            }
+            
+            .footer-logo {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            
+            .footer-logo .logo {
+                justify-content: flex-start;
+                margin-bottom: 20px;
+            }
+            
+            .footer-logo p {
+                font-size: 17px;
+                max-width: 400px;
+                padding: 0;
+                transition: color 0.3s ease;
+            }
+            
+            .founded-date {
+                margin: 20px 0;
+                transition: background-color 0.3s ease;
+            }
+            
+            .footer-links {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            
+            .footer-links h4 {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .footer-links ul li a:hover {
+                color: var(--accent-color);
+                padding-left: 5px;
+            }
+            
+            .copyright {
+                padding-top: 25px;
+                font-size: 15px;
+                transition: border-color 0.3s ease, color 0.3s ease;
+            }
+            
+            /* Startup Timeline */
+            .timeline {
+                margin-top: 30px;
+            }
+            
+            .timeline-item {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+            
+            .timeline-date {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-weight: 600;
+                min-width: 140px;
+                text-align: center;
+                margin-right: 20px;
+            }
+            
+            .timeline-content {
+                background-color: var(--bg-white);
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: var(--shadow-sm);
+                flex-grow: 1;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            
+            body.dark-mode .timeline-content {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Proprietorship Info in Footer Desktop */
+            .proprietorship-info-footer {
+                margin: 25px 0;
+                padding: 20px;
+            }
+            
+            /* Dark mode toggle desktop */
+            .theme-toggle {
+                bottom: 30px;
+                right: 30px;
+                width: 56px;
+                height: 56px;
+                font-size: 22px;
+            }
         }
         
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #f8f9fa;
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .footer-logo {
-            color: #2c3e50;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        
-        .footer-logo span {
-            color: #3498db;
-        }
-        
-        /* Responsive */
-        @media (max-width: 480px) {
-            .features-grid {
+        /* ===== TABLET STYLES ===== */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding: 0 25px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .service-card:last-child {
+                grid-column: span 2;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            nav ul li {
+                margin-left: 25px;
+            }
+            
+            .hero h2 {
+                font-size: 38px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 40px;
+            }
+            
+            .startup-story {
                 grid-template-columns: 1fr;
             }
             
-            .hero-image {
-                height: 150px;
-                font-size: 20px;
-            }
-            
-            .section {
-                padding: 20px 15px;
+            .proprietorship-info {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo">MEER<span>AN</span> IT</div>
-            <div class="tagline">Best IT Training Institute in Chennai</div>
-            <div class="price-badge">Only ₹2,500/month</div>
-            <p>8-Month Program | Guaranteed Placement Assistance</p>
-        </div>
-        
-        <!-- Hero Image -->
-        <div class="hero-image">
-            Transform Your IT Career<br>with Expert Training
-        </div>
-        
-        <!-- Address -->
-        <div class="address-bar">
-            <span>📍 Palavakkam, ECR, Chennai</span>
-            <span>📱 +91 90925 20907 | 📧 nowrose@meeranit.edu</span>
-        </div>
-        
-        <!-- Main CTA -->
-        <div class="section" style="text-align: center; background: #f8f9fa;">
-            <a href="https://wa.me/919092520907?text=Hi%20MEERAN%20IT%20Team%2C%20I'm%20interested%20in%20your%20IT%20courses.%20Please%20share%20more%20details." 
-               class="whatsapp-button" target="_blank">
-                <span class="whatsapp-icon">💬</span>
-                <span>Chat on WhatsApp for Details</span>
-            </a>
-            <p style="margin-top: 15px; color: #666;">Quick response within 15 minutes</p>
-        </div>
-        
-        <!-- Courses -->
-        <div class="section">
-            <h2 class="section-title">Our <span>Courses</span></h2>
-            
-            <!-- Course 1 -->
-            <div class="course-card">
-                <div class="course-title">☕ Java Full Stack Development</div>
-                <ul class="course-features">
-                    <li>Java 21+ with Spring Boot</li>
-                    <li>ReactJS Frontend Development</li>
-                    <li>MySQL & MongoDB Databases</li>
-                    <li>RESTful API Development</li>
-                    <li>4 Real-time Projects</li>
-                    <li>8 Months Duration</li>
-                </ul>
-                <div class="course-price">₹20,000 (₹2,500/month)</div>
-                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20Java%20Full%20Stack%20course%20for%20₹20%2C000" 
-                   class="cta-button" target="_blank">
-                    Enroll Now
-                </a>
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- SMSConnect India SVG Logo -->
+                <div class="logo-svg">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Circle -->
+                        <circle cx="22" cy="22" r="22" fill="url(#logo-gradient)" class="logo-circle"/>
+                        
+                        <!-- Message Bubble -->
+                        <path d="M14 14C14 12.8954 14.8954 12 16 12H28C29.1046 12 30 12.8954 30 14V26C30 27.1046 29.1046 28 28 28H20L16 32V28C14.8954 28 14 27.1046 14 26V14Z" 
+                              fill="white" class="message-bubble"/>
+                        
+                        <!-- Lightning Bolt -->
+                        <path d="M22 10L18 18H22L21 26L26 18H22L22 10Z" fill="#2563EB"/>
+                        
+                        <!-- Connection Dots -->
+                        <circle cx="18" cy="18" r="1.5" fill="#10B981"/>
+                        <circle cx="22" cy="18" r="1.5" fill="#10B981"/>
+                        <circle cx="26" cy="18" r="1.5" fill="#10B981"/>
+                        
+                        <!-- Gradient Definition -->
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#2563EB"/>
+                                <stop offset="1" stop-color="#0EA5E9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1>SMS<span>Connect</span> India<span class="proprietorship-badge">PROPRIETORSHIP</span></h1>
             </div>
             
-            <!-- Course 2 -->
-            <div class="course-card">
-                <div class="course-title">⚛️ DevOps Engineering</div>
-                <ul class="course-features">
-                    <li>Docker & Kubernetes</li>
-                    <li>Jenkins CI/CD Pipeline</li>
-                    <li>AWS Cloud Services</li>
-                    <li>Infrastructure as Code</li>
-                    <li>Monitoring with Prometheus</li>
-                    <li>6 Months Duration</li>
-                </ul>
-                <div class="course-price">₹25,000 (₹4,166/month)</div>
-                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20DevOps%20Engineering%20course%20for%20₹25%2C000" 
-                   class="cta-button" target="_blank">
-                    Enroll Now
-                </a>
-            </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
             
-            <!-- Course 3 -->
-            <div class="course-card">
-                <div class="course-title">🚀 Complete Full Stack (Java + DevOps + ReactJS)</div>
-                <ul class="course-features">
-                    <li>Java Backend Development</li>
-                    <li>ReactJS Frontend Mastery</li>
-                    <li>DevOps & Cloud Deployment</li>
-                    <li>Microservices Architecture</li>
-                    <li>6 Capstone Projects</li>
-                    <li>10 Months Duration</li>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="course-price">₹35,000 (₹3,500/month)</div>
-                <a href="https://wa.me/919092520907?text=Hi%2C%20I'm%20interested%20in%20Complete%20Full%20Stack%20course%20for%20₹35%2C000" 
-                   class="cta-button" target="_blank">
-                    Enroll Now
-                </a>
-            </div>
+            </nav>
         </div>
-        
-        <!-- Why Choose Us -->
-        <div class="section">
-            <h2 class="section-title">Why Choose <span>Us</span></h2>
-            
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">👨‍🏫</div>
-                    <div class="feature-text">Expert Faculty<br>10+ Years Experience</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="startup-badge"><i class="fas fa-rocket"></i> NEW STARTUP</span>
+                <h2>Revolutionizing Business Communication <span>in India</span></h2>
+                <p>SMSConnect India is a proprietorship startup launched in February 2026, bringing cutting-edge SMS solutions to businesses across the country. We're here to transform how you connect with your customers.</p>
+                
+                <div class="company-structure">
+                    <p><i class="fas fa-building"></i> <strong>Proprietorship Structure:</strong> As a sole proprietorship startup, we offer personalized service, quick decision-making, and direct accountability to our clients.</p>
+                    <p class="launch-date">Registered as Proprietorship | Launched on February 1, 2026</p>
                 </div>
                 
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <div class="feature-text">Affordable Pricing<br>80% Cheaper</div>
+                <a href="#contact" class="cta-button">Partner With Us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <span class="startup-badge">OUR OFFERINGS</span>
+                <h2>Next-Generation SMS Solutions</h2>
+                <p>As a proprietorship startup, we provide agile, personalized SMS services with direct oversight from the proprietor.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card new-offering">
+                    <div class="new-badge">NEW</div>
+                    <i class="fas fa-robot"></i>
+                    <h3>AI-Powered SMS</h3>
+                    <p>Leverage artificial intelligence to optimize send times, personalize content, and maximize engagement rates. Our proprietary algorithms learn from your audience behavior.</p>
+                    <p class="launch-date">Launching Q2 2026</p>
                 </div>
                 
-                <div class="feature-item">
-                    <div class="feature-icon">💼</div>
-                    <div class="feature-text">Placement Assistance<br>85% Placement Rate</div>
+                <div class="service-card">
+                    <i class="fas fa-chart-network"></i>
+                    <h3>Smart Campaign Analytics</h3>
+                    <p>Real-time analytics dashboard with insights on delivery rates, engagement metrics, and ROI tracking. Make data-driven decisions for your SMS campaigns.</p>
                 </div>
                 
-                <div class="feature-item">
-                    <div class="feature-icon">🏫</div>
-                    <div class="feature-text">ECR Location<br>Easy Accessibility</div>
+                <div class="service-card new-offering">
+                    <div class="new-badge">BETA</div>
+                    <i class="fas fa-shield-check"></i>
+                    <h3>Blockchain-Verified SMS</h3>
+                    <p>Enhanced security with blockchain verification for critical communications. Ensure message integrity and prevent spoofing with our innovative solution.</p>
+                    <p class="launch-date">In Beta Testing</p>
                 </div>
             </div>
         </div>
-        
-        <!-- Contact Information -->
-        <div class="section">
-            <h2 class="section-title">Contact <span>Us</span></h2>
+    </section>
+
+    <!-- About Startup Section -->
+    <section class="about-startup" id="about">
+        <div class="container">
+            <div class="section-title">
+                <span class="startup-badge">OUR STORY</span>
+                <h2>Building The Future of SMS</h2>
+                <p>Founded in 2026 as a proprietorship, we're on a mission to transform business communication in India with innovative technology and exceptional service.</p>
+            </div>
+            
+            <div class="startup-story">
+                <div class="story-point">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h3>The Idea (2025)</h3>
+                        <p>Our proprietor recognized the need for more intelligent, secure, and user-friendly SMS solutions in the Indian market. Traditional providers were stuck with outdated technology.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h3>Proprietorship Registration (Late 2025)</h3>
+                        <p>Registered as a sole proprietorship to maintain agility, direct customer relationships, and rapid innovation without bureaucratic delays.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-rocket"></i>
+                    <div>
+                        <h3>Official Launch (Feb 1, 2026)</h3>
+                        <p>SMSConnect India officially launched as a proprietorship with our core SMS services, focusing on reliability, transparency, and direct proprietor oversight.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-bullseye"></i>
+                    <div>
+                        <h3>Future Roadmap (2026-2027)</h3>
+                        <p>We're continuously developing new features including AI optimization, advanced analytics, and integration with emerging communication platforms.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proprietorship Details Section -->
+            <div class="proprietorship-details">
+                <h3><i class="fas fa-file-contract"></i> Proprietorship Company Details</h3>
+                <div class="proprietorship-info">
+                    <div class="proprietor-card">
+                        <h4>Business Structure</h4>
+                        <p><strong>Sole Proprietorship</strong><br>
+                        Registered under the proprietor's name<br>
+                        GST Registration: Applied<br>
+                        MSME Registration: In Process</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Proprietor Information</h4>
+                        <p><strong>Jaffer Sadhik</strong><br>
+                        Founder & Proprietor<br>
+                        Direct Contact: +91 9487 660738<br>
+                        Email: Jaffer.sadhik@smsconnect.co.in</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Business Advantages</h4>
+                        <p>• Quick decision-making<br>
+                        • Direct customer relationships<br>
+                        • Lower operational costs<br>
+                        • Personalized service approach</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Legal Compliance</h4>
+                        <p>• Income Tax Registered<br>
+                        • Professional Tax Applied<br>
+                        • All SMS services comply with TRAI regulations<br>
+                        • Data privacy compliant</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <h3 style="text-align: center; margin: 40px 0 20px; transition: color 0.3s ease;">Our Journey</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">October 2025</div>
+                    <div class="timeline-content">Concept development and market research</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 2025</div>
+                    <div class="timeline-content">Proprietorship registration process begins</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">February 1, 2026</div>
+                    <div class="timeline-content">Official launch of SMSConnect India (Proprietorship)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q2 2026</div>
+                    <div class="timeline-content">AI-Powered SMS features rollout</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-form">
+                <div class="section-title" style="text-align: left;">
+                    <span class="startup-badge">GET IN TOUCH</span>
+                    <h2>Work Directly With Our Proprietor</h2>
+                    <p>As a proprietorship startup, you'll work directly with the founder for personalized service and quick resolutions.</p>
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="businessType" required>
+                            <option value="" disabled selected>Select Your Business Type</option>
+                            <option value="startup">Startup</option>
+                            <option value="sme">Small/Medium Business</option>
+                            <option value="enterprise">Enterprise</option>
+                            <option value="agency">Marketing Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Tell us about your SMS needs..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Contact Proprietor Directly <i class="fas fa-user-tie"></i></button>
+                </form>
+            </div>
             
             <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📍</div>
-                    <div>
-                        <strong>Address:</strong><br>
-                        Palavakkam, ECR, Chennai<br>
-                        1/97 Quaithemilleth 2nd Cross Street<br>
-                        Landmark: Periyar Signal, TNTJ Marcus
+                <h3>Connect With Our Proprietor</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Registered Office</h4>
+                            <p>SMSConnect India (Proprietorship)<br>
+                            1/97 Quaidemilleth 2nd Cross Street,<br>
+                            Palavakkam, Chennai-600041<br>
+                            Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Proprietor's Direct Line</h4>
+                            <p>+91 9487 660738</p>
+                            <p style="font-size: 14px; margin-top: 5px;">Direct contact with Jaffer Sadhik</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>Jaffer.sadhik@smsconnect.co.in</p>
+                            <p style="font-size: 14px; margin-top: 5px;">Proprietor & Founder</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.smsconnect.co.in</p>
+                            <p style="font-size: 14px; margin-top: 5px;">Proprietorship Launch: Feb 1, 2026</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <div>
-                        <strong>Phone:</strong><br>
-                        +91 90925 20907<br>
-                        <small>(WhatsApp Available)</small>
-                    </div>
+                <div class="proprietorship-info-footer">
+                    <p><i class="fas fa-info-circle"></i> <strong>Proprietorship Note:</strong> All business dealings are directly managed by the proprietor, ensuring personalized service and quick decision-making for our clients.</p>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <div>
-                        <strong>Email:</strong><br>
-                        nowrose@meeranit.edu<br>
-                        contact@meeranit.edu
+                <h4 style="margin-top: 30px;">Follow Our Journey</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Startup Blog"><i class="fas fa-blog"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <!-- Use the same SVG logo in footer -->
+                        <div class="logo-svg">
+                            <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22" cy="22" r="22" fill="url(#footer-gradient)"/>
+                                <path d="M14 14C14 12.8954 14.8954 12 16 12H28C29.1046 12 30 12.8954 30 14V26C30 27.1046 29.1046 28 28 28H20L16 32V28C14.8954 28 14 27.1046 14 26V14Z" fill="white"/>
+                                <path d="M22 10L18 18H22L21 26L26 18H22L22 10Z" fill="#2563EB"/>
+                                <circle cx="18" cy="18" r="1.5" fill="#10B981"/>
+                                <circle cx="22" cy="18" r="1.5" fill="#10B981"/>
+                                <circle cx="26" cy="18" r="1.5" fill="#10B981"/>
+                                <defs>
+                                    <linearGradient id="footer-gradient" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#2563EB"/>
+                                        <stop offset="1" stop-color="#0EA5E9"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h1>SMS<span>Connect</span> India</h1>
                     </div>
+                    <p>A proprietorship startup revolutionizing business communication in India with cutting-edge SMS solutions. Direct proprietor management ensures personalized service and rapid innovation.</p>
+                    <div class="founded-date"><i class="fas fa-calendar-alt"></i> Proprietorship Founded on February 1, 2026</div>
                 </div>
                 
-                <div class="contact-item">
-                    <div class="contact-icon">🕒</div>
-                    <div>
-                        <strong>Working Hours:</strong><br>
-                        Mon-Sat: 9 AM - 9 PM<br>
-                        Sunday: 10 AM - 6 PM
-                    </div>
+                <div class="footer-links">
+                    <h4>For Businesses</h4>
+                    <ul>
+                        <li><a href="#home">Business Partnerships</a></li>
+                        <li><a href="#services">Service Plans</a></li>
+                        <li><a href="#about">Our Technology</a></li>
+                        <li><a href="#">Legal Compliance</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Proprietorship Info</h4>
+                    <ul>
+                        <li><a href="#about">Business Structure</a></li>
+                        <li><a href="#contact">Direct Contact</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Compliance Details</a></li>
+                    </ul>
                 </div>
             </div>
             
-            <a href="tel:+919092520907" class="cta-button" style="background: #2ecc71;">
-                📞 Call Now: +91 90925 20907
-            </a>
+            <div class="copyright">
+                <p>&copy; 2026 SMSConnect India (Proprietorship). All Rights Reserved. | Proprietor: Jaffer Sadhik | Registered Launch: February 1, 2026 | www.smsconnect.co.in</p>
+                <p style="margin-top: 10px; font-size: 13px;">A sole proprietorship startup building the future of business communication in India</p>
+            </div>
         </div>
-        
-        <!-- Footer -->
-        <div class="footer">
-            <div class="footer-logo">MEER<span>AN</span> IT</div>
-            <p>Making quality IT education accessible to everyone</p>
-            <p style="margin-top: 15px; font-size: 12px;">
-                © 2024 MEERAN IT Training Institute<br>
-                Palavakkam, ECR, Chennai | +91 90925 20907
-            </p>
-        </div>
-    </div>
+    </footer>
 
     <script>
-        // WhatsApp sharing enhancement
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add click tracking for WhatsApp buttons
-            const whatsappLinks = document.querySelectorAll('a[href*="wa.me"]');
-            whatsappLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // You can add analytics tracking here
-                    console.log('WhatsApp link clicked:', this.href);
-                });
-            });
+        // Dark Mode Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or prefer-color-scheme
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
             
-            // Make phone numbers clickable on mobile
-            const phoneNumbers = document.querySelectorAll('a[href^="tel:"]');
-            phoneNumbers.forEach(phone => {
-                phone.addEventListener('click', function(e) {
-                    if (window.innerWidth > 768) {
-                        e.preventDefault();
-                        alert('Please use WhatsApp or email for desktop enquiries');
-                    }
-                });
+            // Check system preference
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        
+        // Apply theme
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+            localStorage.setItem('theme', theme);
+        };
+        
+        // Initialize theme
+        const initTheme = () => {
+            const preferredTheme = getPreferredTheme();
+            applyTheme(preferredTheme);
+            
+            // Update toggle button text for screen readers
+            const toggleText = preferredTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', toggleText);
+        };
+        
+        // Toggle theme
+        const toggleTheme = () => {
+            const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+            
+            // Update toggle button text for screen readers
+            const toggleText = newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', toggleText);
+            
+            // Add animation effect
+            themeToggle.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1)';
+            }, 150);
+        };
+        
+        // Listen for system theme changes
+        const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        colorSchemeQuery.addEventListener('change', (e) => {
+            // Only apply system preference if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                applyTheme(newTheme);
+            }
+        });
+        
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+        
+        // Add click event to theme toggle
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            
+            // Change icon based on menu state
+            const icon = this.querySelector('i');
+            if (nav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
             });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const isMobile = window.innerWidth < 768;
+                    const offset = isMobile ? 70 : 80;
+                    
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Proprietorship form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const businessType = document.getElementById('businessType').value;
+            const message = document.getElementById('message').value;
+            
+            // Validation
+            if (!name || !email || !phone || !businessType || !message) {
+                alert('Please fill in all fields to contact our proprietor directly.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Connecting...';
+            submitBtn.disabled = true;
+            
+            // In a real implementation, this would send data to a server
+            setTimeout(() => {
+                const isMobile = window.innerWidth < 768;
+                const successMessage = isMobile 
+                    ? `📞 Thanks ${name}! Our proprietor will contact you directly within 24 hours.` 
+                    : `📞 Excellent ${name}! As a proprietorship, you'll receive direct attention from our proprietor:\n• Personalized service consultation\n• Quick decision-making\n• Direct accountability\n\nProprietor Jaffer Sadhik will contact you at ${phone} within 24 hours.`;
+                
+                alert(successMessage);
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to thank you message
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 1500);
+        });
+        
+        // Add current year to footer if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            // Keep 2026 as founding year
+        });
+        
+        // Handle resize events
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        });
+        
+        // Proprietorship info toggle for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const proprietorCards = document.querySelectorAll('.proprietor-card');
+            if (window.innerWidth < 768) {
+                proprietorCards.forEach(card => {
+                    card.addEventListener('click', function() {
+                        this.classList.toggle('expanded');
+                    });
+                });
+            }
         });
     </script>
 </body>
