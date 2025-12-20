@@ -1,5 +1,3236 @@
-<HTML>
-<BODY>
-DROPPED
-</BODY>
-</HTML>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMSConnect India - Bulk SMS Service Provider | Proprietorship Startup Launching Feb 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base Styles (Mobile First) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        :root {
+            /* Light Theme Variables */
+            --primary-color: #10b981;
+            --secondary-color: #0ea5e9;
+            --accent-color: #f59e0b;
+            --startup-green: #10b981;
+            --proprietorship-color: #8b5cf6;
+            --sms-blue: #2563eb;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            
+            /* Dark Theme Variables - Default */
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --dark-text: #f1f5f9;
+            --dark-text-light: #cbd5e1;
+            --dark-border: #334155;
+            --dark-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        /* Dark Mode Classes */
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode header {
+            background-color: var(--dark-card);
+            border-bottom-color: var(--dark-border);
+        }
+        
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+        
+        body.dark-mode .services,
+        body.dark-mode .contact {
+            background-color: var(--dark-bg);
+        }
+        
+        body.dark-mode .service-card,
+        body.dark-mode .startup-story,
+        body.dark-mode .timeline-content {
+            background-color: var(--dark-card);
+            border-color: var(--dark-border);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .about-startup {
+            background-color: #1e293b;
+        }
+        
+        body.dark-mode footer {
+            background-color: #0f172a;
+            border-top-color: var(--dark-border);
+        }
+        
+        body.dark-mode .logo h1 {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .section-title h2 {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .section-title p {
+            color: var(--dark-text-light);
+        }
+        
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea,
+        body.dark-mode .form-group select {
+            background-color: #334155;
+            border-color: #475569;
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .form-group input:focus,
+        body.dark-mode .form-group textarea:focus,
+        body.dark-mode .form-group select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.3);
+        }
+        
+        body.dark-mode .footer-links ul li a {
+            color: #cbd5e1;
+        }
+        
+        body.dark-mode .copyright {
+            border-top-color: #334155;
+            color: #94a3b8;
+        }
+        
+        /* Founder & CEO Section Styles */
+        .founder-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8fafc, #f0f9ff);
+            transition: background 0.3s ease;
+        }
+        
+        body.dark-mode .founder-section {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+        }
+        
+        .founder-profile {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .founder-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--primary-color);
+            box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 80px;
+        }
+        
+        .founder-details {
+            text-align: center;
+            max-width: 1000px;
+        }
+        
+        .founder-title {
+            color: var(--proprietorship-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .founder-name {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+        
+        .founder-subtitle {
+            color: var(--sms-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        body.dark-mode .founder-name {
+            color: var(--dark-text);
+        }
+        
+        .founder-contact {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .contact-info-item {
+            color: var(--dark-text-light);
+        }
+        
+        .contact-info-item i {
+            color: var(--primary-color);
+        }
+        
+        .founder-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            padding: 0 20px;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .founder-quote {
+            color: var(--dark-text-light);
+        }
+        
+        .founder-quote i {
+            color: var(--accent-color);
+            margin: 0 10px;
+        }
+        
+        .founder-bio {
+            text-align: left;
+            background-color: var(--bg-white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-md);
+            margin-top: 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body.dark-mode .founder-bio {
+            background-color: var(--dark-card);
+        }
+        
+        .founder-bio h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .founder-bio p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        /* Experience Timeline */
+        .experience-timeline {
+            margin: 30px 0;
+        }
+        
+        .experience-item {
+            display: flex;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color 0.3s ease;
+        }
+        
+        body.dark-mode .experience-item {
+            border-bottom-color: var(--dark-border);
+        }
+        
+        .experience-duration {
+            min-width: 120px;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .experience-details h5 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .experience-details h5 {
+            color: var(--dark-text);
+        }
+        
+        .experience-details .company {
+            color: var(--sms-blue);
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .experience-details .duration {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .experience-details .duration {
+            color: var(--dark-text-light);
+        }
+        
+        /* Tech Stack */
+        .tech-stack {
+            margin: 30px 0;
+        }
+        
+        .tech-category {
+            margin-bottom: 20px;
+        }
+        
+        .tech-category h5 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tech-tag {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--text-dark);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        body.dark-mode .tech-tag {
+            background-color: rgba(16, 185, 129, 0.2);
+            color: var(--dark-text);
+        }
+        
+        .tech-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Product Section */
+        .product-section {
+            margin: 30px 0;
+            padding: 25px;
+            background-color: rgba(37, 99, 235, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--sms-blue);
+            transition: background-color 0.3s ease;
+        }
+        
+        body.dark-mode .product-section {
+            background-color: rgba(37, 99, 235, 0.1);
+        }
+        
+        .product-section h4 {
+            color: var(--sms-blue);
+            margin-bottom: 15px;
+        }
+        
+        .product-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .product-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .product-feature i {
+            color: var(--primary-color);
+            margin-top: 5px;
+        }
+        
+        /* Education & Personal Details */
+        .education-section {
+            margin: 30px 0;
+        }
+        
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .education-item {
+            background-color: rgba(245, 158, 11, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid var(--accent-color);
+            transition: background-color 0.3s ease;
+        }
+        
+        body.dark-mode .education-item {
+            background-color: rgba(245, 158, 11, 0.1);
+        }
+        
+        .education-item h5 {
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .personal-details {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            transition: border-color 0.3s ease;
+        }
+        
+        body.dark-mode .personal-details {
+            border-top-color: var(--dark-border);
+        }
+        
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .personal-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .personal-item i {
+            color: var(--proprietorship-color);
+        }
+        
+        /* Launch Countdown Timer */
+        .countdown-container {
+            background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 25px 0;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .countdown-title {
+            font-size: 20px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .countdown-unit {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+        
+        .countdown-number {
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 1;
+        }
+        
+        .countdown-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+        
+        /* Pre-Launch Badge */
+        .prelaunch-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Early Bird Registration */
+        .early-bird-offer {
+            background-color: rgba(245, 158, 11, 0.1);
+            border: 2px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .early-bird-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 35px;
+            font-size: 12px;
+            font-weight: 700;
+            transform: rotate(45deg);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Proprietorship Badge */
+        .proprietorship-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--proprietorship-color), #a78bfa);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+            vertical-align: middle;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* Bulk SMS Pricing Table */
+        .pricing-table {
+            width: 100%;
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            margin: 30px 0;
+            transition: background-color 0.3s ease;
+        }
+        
+        body.dark-mode .pricing-table {
+            background-color: var(--dark-card);
+        }
+        
+        .pricing-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .pricing-header h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-header p {
+            opacity: 0.9;
+        }
+        
+        .pricing-plans {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        
+        .pricing-plan {
+            padding: 25px;
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        body.dark-mode .pricing-plan {
+            border-bottom-color: var(--dark-border);
+        }
+        
+        .pricing-plan:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-plan.popular {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        body.dark-mode .pricing-plan.popular {
+            background-color: rgba(16, 185, 129, 0.2);
+        }
+        
+        .plan-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .plan-price {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--sms-blue);
+            margin-bottom: 15px;
+        }
+        
+        .plan-price span {
+            font-size: 16px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        body.dark-mode .plan-price span {
+            color: var(--dark-text-light);
+        }
+        
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        
+        .plan-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .plan-features li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+        
+        .plan-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--sms-blue), var(--primary-color));
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .plan-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .plan-button.pre-register {
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+        }
+        
+        .popular-badge {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        /* SMS Type Cards */
+        .sms-type-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .sms-type-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--sms-blue);
+            transition: var(--transition);
+        }
+        
+        body.dark-mode .sms-type-card {
+            background-color: var(--dark-card);
+        }
+        
+        .sms-type-card.transactional {
+            border-left-color: var(--primary-color);
+        }
+        
+        .sms-type-card.promotional {
+            border-left-color: var(--accent-color);
+        }
+        
+        .sms-type-card.otp {
+            border-left-color: var(--proprietorship-color);
+        }
+        
+        .sms-type-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .sms-type-icon {
+            background: linear-gradient(135deg, var(--sms-blue), #3b82f6);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-right: 15px;
+        }
+        
+        .sms-type-card.transactional .sms-type-icon {
+            background: linear-gradient(135deg, var(--primary-color), #34d399);
+        }
+        
+        .sms-type-card.promotional .sms-type-icon {
+            background: linear-gradient(135deg, var(--accent-color), #fbbf24);
+        }
+        
+        .sms-type-card.otp .sms-type-icon {
+            background: linear-gradient(135deg, var(--proprietorship-color), #a78bfa);
+        }
+        
+        .sms-type-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .sms-type-title {
+            color: var(--dark-text);
+        }
+        
+        .sms-type-rate {
+            color: var(--text-light);
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+        
+        body.dark-mode .sms-type-rate {
+            color: var(--dark-text-light);
+        }
+        
+        /* Logo SVG Styling */
+        .logo-svg {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .logo-svg svg {
+            display: block;
+        }
+        
+        /* Mobile logo size */
+        @media (max-width: 767px) {
+            .logo-svg {
+                margin-right: 10px;
+            }
+            
+            .logo-svg svg {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .proprietorship-badge {
+                font-size: 10px;
+                padding: 3px 8px;
+                margin-left: 5px;
+            }
+            
+            .countdown-unit {
+                min-width: 60px;
+                padding: 8px 10px;
+            }
+            
+            .countdown-number {
+                font-size: 22px;
+            }
+            
+            /* Mobile Founder Section */
+            .founder-section {
+                padding: 40px 0;
+            }
+            
+            .founder-image {
+                width: 150px;
+                height: 150px;
+                font-size: 60px;
+            }
+            
+            .founder-name {
+                font-size: 28px;
+            }
+            
+            .founder-subtitle {
+                font-size: 16px;
+            }
+            
+            .founder-quote {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+            
+            .founder-bio {
+                padding: 20px;
+            }
+            
+            .contact-info-item {
+                font-size: 14px;
+            }
+            
+            .experience-item {
+                flex-direction: column;
+            }
+            
+            .experience-duration {
+                margin-bottom: 10px;
+            }
+            
+            .product-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Desktop logo size */
+        @media (min-width: 768px) {
+            .logo-svg {
+                margin-right: 15px;
+            }
+            
+            .logo-svg svg {
+                width: 44px;
+                height: 44px;
+            }
+            
+            /* Desktop Founder Section */
+            .founder-profile {
+                flex-direction: row;
+                text-align: left;
+                align-items: flex-start;
+            }
+            
+            .founder-details {
+                text-align: left;
+                flex: 1;
+            }
+            
+            .founder-quote {
+                padding: 0;
+                text-align: left;
+            }
+            
+            .founder-contact {
+                justify-content: flex-start;
+            }
+        }
+        
+        /* Dark mode adjustments for SVG */
+        body.dark-mode .logo-svg svg .logo-circle {
+            fill: #1e40af;
+        }
+        
+        body.dark-mode .logo-svg svg .message-bubble {
+            fill: #e2e8f0;
+        }
+        
+        /* Dark mode toggle button */
+        .theme-toggle {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+        }
+        
+        .theme-toggle .moon-icon {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .sun-icon {
+            display: none;
+        }
+        
+        body.dark-mode .theme-toggle .moon-icon {
+            display: block;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            font-size: 16px;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        .container {
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .startup-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--startup-green), #34d399);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .launch-date {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        
+        /* ===== MOBILE STYLES ===== */
+        @media (max-width: 767px) {
+            /* Mobile Header */
+            header {
+                background-color: var(--bg-white);
+                padding: 16px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: var(--shadow-sm);
+                border-bottom: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .logo h1 {
+                font-size: 18px;
+                font-weight: 800;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            .logo span {
+                color: var(--sms-blue);
+            }
+            
+            /* Mobile Menu */
+            .mobile-menu-btn {
+                background: none;
+                border: none;
+                color: var(--primary-color);
+                font-size: 22px;
+                cursor: pointer;
+                padding: 5px;
+                display: block;
+                transition: color 0.3s ease;
+            }
+            
+            nav {
+                position: fixed;
+                top: 68px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-white);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition), background-color 0.3s ease;
+                z-index: 999;
+                box-shadow: var(--shadow-md);
+                border-top: 1px solid var(--border-color);
+            }
+            
+            body.dark-mode nav {
+                background-color: var(--dark-card);
+                border-top-color: var(--dark-border);
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            nav ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            nav ul li {
+                border-bottom: 1px solid var(--border-color);
+                transition: border-color 0.3s ease;
+            }
+            
+            body.dark-mode nav ul li {
+                border-bottom-color: var(--dark-border);
+            }
+            
+            nav ul li:last-child {
+                border-bottom: none;
+            }
+            
+            nav ul li a {
+                display: block;
+                color: var(--text-dark);
+                text-decoration: none;
+                padding: 16px 20px;
+                font-weight: 600;
+                font-size: 16px;
+                transition: var(--transition);
+            }
+            
+            nav ul li a:hover {
+                background-color: #f0f9ff;
+                color: var(--primary-color);
+                padding-left: 25px;
+            }
+            
+            body.dark-mode nav ul li a:hover {
+                background-color: #1e293b;
+            }
+            
+            /* Mobile Hero */
+            .hero {
+                padding: 50px 0 40px;
+                background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                transition: background 0.3s ease;
+            }
+            
+            .hero::before {
+                content: "";
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background: rgba(16, 185, 129, 0.05);
+                top: -100px;
+                right: -100px;
+            }
+            
+            .hero::after {
+                content: "";
+                position: absolute;
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background: rgba(245, 158, 11, 0.05);
+                bottom: -75px;
+                left: -75px;
+            }
+            
+            body.dark-mode .hero::before {
+                background: rgba(16, 185, 129, 0.1);
+            }
+            
+            body.dark-mode .hero::after {
+                background: rgba(245, 158, 11, 0.1);
+            }
+            
+            .hero-content {
+                position: relative;
+                z-index: 1;
+            }
+            
+            .hero h2 {
+                font-size: 28px;
+                margin-bottom: 15px;
+                color: var(--text-dark);
+                line-height: 1.3;
+                transition: color 0.3s ease;
+            }
+            
+            .hero h2 span {
+                color: var(--sms-blue);
+            }
+            
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 25px;
+                color: var(--text-light);
+                padding: 0 10px;
+                transition: color 0.3s ease;
+            }
+            
+            body.dark-mode .hero p {
+                color: var(--dark-text-light);
+            }
+            
+            .company-structure {
+                background-color: rgba(16, 185, 129, 0.1);
+                border-left: 4px solid var(--primary-color);
+                padding: 15px;
+                margin: 20px 0;
+                border-radius: 0 8px 8px 0;
+                text-align: left;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .company-structure {
+                background-color: rgba(16, 185, 129, 0.2);
+            }
+            
+            .cta-button {
+                display: inline-block;
+                background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+                color: var(--bg-white);
+                padding: 14px 32px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                transition: var(--transition);
+                box-shadow: var(--shadow-md);
+                border: none;
+                cursor: pointer;
+            }
+            
+            .cta-button:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            }
+            
+            /* Mobile Services */
+            .services {
+                padding: 50px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .section-title {
+                text-align: center;
+                margin-bottom: 35px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+                color: var(--text-dark);
+                margin-bottom: 10px;
+                transition: color 0.3s ease;
+            }
+            
+            .section-title p {
+                color: var(--text-light);
+                padding: 0 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .services-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+            }
+            
+            .service-card {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px 20px;
+                box-shadow: var(--shadow-md);
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease;
+                text-align: center;
+                border: 1px solid var(--border-color);
+            }
+            
+            .service-card.new-offering {
+                border: 2px solid var(--accent-color);
+                position: relative;
+                overflow: hidden;
+            }
+            
+            body.dark-mode .service-card.new-offering {
+                border-color: var(--accent-color);
+            }
+            
+            .new-badge {
+                position: absolute;
+                top: 15px;
+                right: -30px;
+                background-color: var(--accent-color);
+                color: white;
+                padding: 5px 35px;
+                font-size: 12px;
+                font-weight: 700;
+                transform: rotate(45deg);
+                box-shadow: var(--shadow-sm);
+            }
+            
+            .service-card i {
+                font-size: 40px;
+                color: var(--primary-color);
+                margin-bottom: 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .service-card h3 {
+                font-size: 20px;
+                margin-bottom: 12px;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            .service-card p {
+                color: var(--text-light);
+                transition: color 0.3s ease;
+            }
+            
+            body.dark-mode .service-card p {
+                color: var(--dark-text-light);
+            }
+            
+            /* Mobile Pricing Table */
+            .pricing-plan {
+                padding: 20px;
+            }
+            
+            .plan-price {
+                font-size: 28px;
+            }
+            
+            /* Mobile About Startup */
+            .about-startup {
+                padding: 50px 0;
+                background-color: #f0f9ff;
+                transition: background-color 0.3s ease;
+            }
+            
+            .startup-story {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px;
+                box-shadow: var(--shadow-md);
+                margin-top: 25px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .story-point {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: flex-start;
+            }
+            
+            .story-point i {
+                font-size: 20px;
+                color: var(--startup-green);
+                margin-right: 15px;
+                margin-top: 5px;
+                background-color: rgba(16, 185, 129, 0.1);
+                padding: 10px;
+                border-radius: 50%;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .story-point i {
+                background-color: rgba(16, 185, 129, 0.2);
+            }
+            
+            .story-point h3 {
+                transition: color 0.3s ease;
+            }
+            
+            .story-point p {
+                transition: color 0.3s ease;
+            }
+            
+            /* Proprietorship Details */
+            .proprietorship-details {
+                background-color: var(--bg-white);
+                border-radius: 12px;
+                padding: 25px;
+                box-shadow: var(--shadow-md);
+                margin-top: 25px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .proprietorship-details h3 {
+                color: var(--proprietorship-color);
+                margin-bottom: 15px;
+                font-size: 22px;
+            }
+            
+            .proprietorship-info {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .proprietor-card {
+                background-color: #f8fafc;
+                border-radius: 10px;
+                padding: 20px;
+                border-left: 4px solid var(--proprietorship-color);
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .proprietor-card {
+                background-color: #1e293b;
+            }
+            
+            .proprietor-card h4 {
+                color: var(--proprietorship-color);
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+            
+            /* Mobile Contact */
+            .contact {
+                padding: 50px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .contact-container {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .contact-info {
+                background: linear-gradient(135deg, var(--primary-color), var(--sms-blue));
+                color: var(--bg-white);
+                padding: 30px 25px;
+                border-radius: 12px;
+                box-shadow: var(--shadow-lg);
+                order: 2;
+            }
+            
+            body.dark-mode .contact-info {
+                background: linear-gradient(135deg, #10b981, #1e40af);
+            }
+            
+            .contact-info h3 {
+                font-size: 24px;
+                margin-bottom: 25px;
+                color: var(--bg-white);
+            }
+            
+            .contact-item {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: flex-start;
+            }
+            
+            .contact-item i {
+                font-size: 20px;
+                margin-right: 12px;
+                margin-top: 3px;
+                color: var(--accent-color);
+                min-width: 24px;
+            }
+            
+            .contact-item h4 {
+                font-size: 16px;
+                margin-bottom: 5px;
+                color: rgba(255, 255, 255, 0.9);
+            }
+            
+            .contact-item p {
+                font-size: 15px;
+                line-height: 1.5;
+                color: rgba(255, 255, 255, 0.8);
+            }
+            
+            .social-links {
+                display: flex;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            
+            .social-links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 50%;
+                color: var(--bg-white);
+                font-size: 16px;
+                transition: var(--transition);
+            }
+            
+            .social-links a:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                transform: translateY(-3px);
+            }
+            
+            /* Mobile Form */
+            .contact-form {
+                order: 1;
+            }
+            
+            .form-group {
+                margin-bottom: 20px;
+            }
+            
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                width: 100%;
+                padding: 14px 18px;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+                font-size: 16px;
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+                background-color: var(--bg-white);
+                color: var(--text-dark);
+            }
+            
+            .form-group select {
+                appearance: none;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: right 15px center;
+                background-size: 16px;
+            }
+            
+            body.dark-mode .form-group select {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23cbd5e1' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            }
+            
+            .form-group input:focus,
+            .form-group textarea:focus,
+            .form-group select:focus {
+                outline: none;
+                border-color: var(--primary-color);
+                box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+            }
+            
+            /* Mobile Footer */
+            footer {
+                background-color: #1f2937;
+                color: var(--bg-white);
+                padding: 40px 0 20px;
+                text-align: center;
+                border-top: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .footer-logo {
+                margin-bottom: 25px;
+            }
+            
+            .footer-logo .logo {
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+            
+            .footer-logo p {
+                color: #d1d5db;
+                font-size: 15px;
+                line-height: 1.6;
+                padding: 0 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .founded-date {
+                display: inline-block;
+                background-color: rgba(16, 185, 129, 0.2);
+                color: #10b981;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-size: 14px;
+                margin: 15px 0;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+            }
+            
+            body.dark-mode .founded-date {
+                background-color: rgba(16, 185, 129, 0.3);
+            }
+            
+            .footer-links {
+                margin-bottom: 30px;
+            }
+            
+            .footer-links h4 {
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: var(--accent-color);
+            }
+            
+            .footer-links ul {
+                list-style: none;
+                padding: 0;
+            }
+            
+            .footer-links ul li {
+                margin-bottom: 8px;
+            }
+            
+            .footer-links ul li a {
+                color: #d1d5db;
+                text-decoration: none;
+                font-size: 15px;
+                transition: var(--transition), color 0.3s ease;
+            }
+            
+            .footer-links ul li a:hover {
+                color: var(--accent-color);
+            }
+            
+            .copyright {
+                border-top: 1px solid #374151;
+                padding-top: 20px;
+                font-size: 14px;
+                color: #9ca3af;
+                transition: border-color 0.3s ease, color 0.3s ease;
+            }
+            
+            /* Proprietorship Info in Footer */
+            .proprietorship-info-footer {
+                background-color: rgba(139, 92, 246, 0.1);
+                border-radius: 10px;
+                padding: 15px;
+                margin: 20px 0;
+                border-left: 3px solid var(--proprietorship-color);
+            }
+            
+            /* Dark mode toggle mobile positioning */
+            .theme-toggle {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 20px;
+            }
+        }
+        
+        /* ===== DESKTOP STYLES ===== */
+        @media (min-width: 768px) {
+            body {
+                font-size: 17px;
+            }
+            
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 30px;
+            }
+            
+            /* Desktop Header */
+            header {
+                background-color: var(--bg-white);
+                padding: 20px 0;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                box-shadow: var(--shadow-md);
+                border-bottom: 1px solid var(--border-color);
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .logo h1 {
+                font-size: 26px;
+                font-weight: 800;
+                color: var(--text-dark);
+                transition: color 0.3s ease;
+            }
+            
+            /* Desktop Menu */
+            .mobile-menu-btn {
+                display: none;
+            }
+            
+            nav {
+                display: block !important;
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                background: none;
+                box-shadow: none;
+                border-top: none;
+            }
+            
+            nav ul {
+                display: flex;
+                list-style: none;
+            }
+            
+            nav ul li {
+                border-bottom: none;
+                margin-left: 35px;
+            }
+            
+            nav ul li:first-child {
+                margin-left: 0;
+            }
+            
+            nav ul li a {
+                color: var(--text-dark);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 17px;
+                padding: 8px 0;
+                position: relative;
+                transition: var(--transition);
+            }
+            
+            nav ul li a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: var(--primary-color);
+                transition: var(--transition);
+            }
+            
+            nav ul li a:hover::after {
+                width: 100%;
+            }
+            
+            nav ul li a:hover {
+                background-color: transparent;
+                padding-left: 0;
+                color: var(--primary-color);
+            }
+            
+            /* Desktop Hero */
+            .hero {
+                padding: 100px 0 80px;
+                background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                transition: background 0.3s ease;
+            }
+            
+            .hero::before {
+                width: 400px;
+                height: 400px;
+                top: -200px;
+                right: -200px;
+            }
+            
+            .hero::after {
+                width: 300px;
+                height: 300px;
+                bottom: -150px;
+                left: -150px;
+            }
+            
+            .hero h2 {
+                font-size: 48px;
+                margin-bottom: 20px;
+                color: var(--text-dark);
+                max-width: 900px;
+                margin-left: auto;
+                margin-right: auto;
+                transition: color 0.3s ease;
+            }
+            
+            .hero p {
+                font-size: 20px;
+                max-width: 850px;
+                margin: 0 auto 35px;
+                color: var(--text-light);
+                line-height: 1.7;
+                padding: 0;
+                transition: color 0.3s ease;
+            }
+            
+            .company-structure {
+                max-width: 800px;
+                margin: 30px auto;
+                padding: 25px;
+                font-size: 18px;
+                transition: background-color 0.3s ease;
+            }
+            
+            .cta-button {
+                padding: 18px 45px;
+                font-size: 18px;
+                border-radius: 10px;
+            }
+            
+            .cta-button:hover {
+                transform: translateY(-5px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            /* Desktop Services */
+            .services {
+                padding: 90px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .section-title {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            
+            .section-title h2 {
+                font-size: 40px;
+                color: var(--text-dark);
+                margin-bottom: 15px;
+                transition: color 0.3s ease;
+            }
+            
+            .section-title p {
+                color: var(--text-light);
+                max-width: 700px;
+                margin: 0 auto;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+            
+            .services-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 35px;
+            }
+            
+            .service-card {
+                padding: 40px 30px;
+                border-radius: 16px;
+                transition: var(--transition), background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .service-card:hover {
+                transform: translateY(-10px);
+                box-shadow: var(--shadow-lg);
+            }
+            
+            body.dark-mode .service-card:hover {
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            }
+            
+            .service-card.new-offering:hover {
+                transform: translateY(-15px);
+                box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2);
+            }
+            
+            body.dark-mode .service-card.new-offering:hover {
+                box-shadow: 0 15px 35px rgba(245, 158, 11, 0.3);
+            }
+            
+            .new-badge {
+                top: 20px;
+                right: -35px;
+                padding: 6px 40px;
+                font-size: 13px;
+            }
+            
+            .service-card i {
+                font-size: 52px;
+                margin-bottom: 25px;
+                transition: color 0.3s ease;
+            }
+            
+            .service-card h3 {
+                font-size: 24px;
+                margin-bottom: 18px;
+                transition: color 0.3s ease;
+            }
+            
+            /* Desktop Pricing */
+            .pricing-plans {
+                flex-direction: row;
+            }
+            
+            .pricing-plan {
+                flex: 1;
+                border-bottom: none;
+                border-right: 1px solid var(--border-color);
+            }
+            
+            body.dark-mode .pricing-plan {
+                border-right-color: var(--dark-border);
+            }
+            
+            .pricing-plan:last-child {
+                border-right: none;
+            }
+            
+            .pricing-plan.popular {
+                transform: scale(1.05);
+                z-index: 1;
+                box-shadow: var(--shadow-lg);
+            }
+            
+            /* Desktop SMS Type Cards */
+            .sms-type-cards {
+                flex-direction: row;
+                gap: 30px;
+            }
+            
+            .sms-type-card {
+                flex: 1;
+            }
+            
+            /* Desktop About Startup */
+            .about-startup {
+                padding: 90px 0;
+                background-color: #f0f9ff;
+                transition: background-color 0.3s ease;
+            }
+            
+            .startup-story {
+                padding: 45px;
+                margin-top: 40px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .story-point {
+                margin-bottom: 30px;
+            }
+            
+            .story-point i {
+                font-size: 24px;
+                padding: 12px;
+                transition: background-color 0.3s ease;
+            }
+            
+            /* Proprietorship Details Desktop */
+            .proprietorship-details {
+                padding: 45px;
+                margin-top: 40px;
+            }
+            
+            .proprietorship-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            /* Desktop Contact */
+            .contact {
+                padding: 90px 0;
+                background-color: var(--bg-white);
+                transition: background-color 0.3s ease;
+            }
+            
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: start;
+            }
+            
+            .contact-info {
+                padding: 45px 40px;
+                border-radius: 16px;
+                height: 100%;
+            }
+            
+            .contact-info h3 {
+                font-size: 32px;
+                margin-bottom: 35px;
+            }
+            
+            .contact-item {
+                margin-bottom: 28px;
+            }
+            
+            .contact-item i {
+                font-size: 24px;
+                margin-right: 18px;
+                margin-top: 5px;
+            }
+            
+            .contact-item h4 {
+                font-size: 19px;
+                margin-bottom: 8px;
+            }
+            
+            .contact-item p {
+                font-size: 17px;
+            }
+            
+            .social-links a {
+                width: 44px;
+                height: 44px;
+                font-size: 18px;
+            }
+            
+            .social-links a:hover {
+                background-color: var(--accent-color);
+                transform: translateY(-5px);
+            }
+            
+            /* Desktop Footer */
+            footer {
+                padding: 60px 0 30px;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+            }
+            
+            .footer-content {
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr;
+                gap: 50px;
+                margin-bottom: 40px;
+                text-align: left;
+            }
+            
+            .footer-logo {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            
+            .footer-logo .logo {
+                justify-content: flex-start;
+                margin-bottom: 20px;
+            }
+            
+            .footer-logo p {
+                font-size: 17px;
+                max-width: 400px;
+                padding: 0;
+                transition: color 0.3s ease;
+            }
+            
+            .founded-date {
+                margin: 20px 0;
+                transition: background-color 0.3s ease;
+            }
+            
+            .footer-links {
+                text-align: left;
+                margin-bottom: 0;
+            }
+            
+            .footer-links h4 {
+                font-size: 20px;
+                margin-bottom: 25px;
+            }
+            
+            .footer-links ul li a:hover {
+                color: var(--accent-color);
+                padding-left: 5px;
+            }
+            
+            .copyright {
+                padding-top: 25px;
+                font-size: 15px;
+                transition: border-color 0.3s ease, color 0.3s ease;
+            }
+            
+            /* Startup Timeline */
+            .timeline {
+                margin-top: 30px;
+            }
+            
+            .timeline-item {
+                display: flex;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+            
+            .timeline-date {
+                background-color: var(--primary-color);
+                color: white;
+                padding: 8px 16px;
+                border-radius: 20px;
+                font-weight: 600;
+                min-width: 140px;
+                text-align: center;
+                margin-right: 20px;
+            }
+            
+            .timeline-content {
+                background-color: var(--bg-white);
+                padding: 15px 20px;
+                border-radius: 10px;
+                box-shadow: var(--shadow-sm);
+                flex-grow: 1;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+            
+            body.dark-mode .timeline-content {
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Proprietorship Info in Footer Desktop */
+            .proprietorship-info-footer {
+                margin: 25px 0;
+                padding: 20px;
+            }
+            
+            /* Dark mode toggle desktop */
+            .theme-toggle {
+                bottom: 30px;
+                right: 30px;
+                width: 56px;
+                height: 56px;
+                font-size: 22px;
+            }
+            
+            /* Desktop Founder Section */
+            .founder-section {
+                padding: 90px 0;
+            }
+            
+            .founder-image {
+                width: 240px;
+                height: 240px;
+                font-size: 90px;
+            }
+            
+            .founder-name {
+                font-size: 42px;
+            }
+            
+            .founder-subtitle {
+                font-size: 20px;
+            }
+            
+            .founder-quote {
+                font-size: 20px;
+            }
+            
+            .product-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .education-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        /* ===== TABLET STYLES ===== */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                padding: 0 25px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+            
+            .service-card:last-child {
+                grid-column: span 2;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            nav ul li {
+                margin-left: 25px;
+            }
+            
+            .hero h2 {
+                font-size: 38px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1.5fr 1fr 1fr;
+                gap: 40px;
+            }
+            
+            .startup-story {
+                grid-template-columns: 1fr;
+            }
+            
+            .proprietorship-info {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-plans {
+                flex-direction: column;
+            }
+            
+            .pricing-plan {
+                border-right: none;
+                border-bottom: 1px solid var(--border-color);
+            }
+            
+            body.dark-mode .pricing-plan {
+                border-bottom-color: var(--dark-border);
+            }
+            
+            .sms-type-cards {
+                flex-direction: column;
+            }
+            
+            .founder-profile {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .founder-details {
+                text-align: center;
+            }
+            
+            .founder-quote {
+                text-align: center;
+            }
+            
+            .founder-contact {
+                justify-content: center;
+            }
+            
+            .product-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .education-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Dark Mode Toggle Button -->
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <!-- SMSConnect India SVG Logo -->
+                <div class="logo-svg">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background Circle -->
+                        <circle cx="22" cy="22" r="22" fill="url(#logo-gradient)" class="logo-circle"/>
+                        
+                        <!-- Message Bubble -->
+                        <path d="M14 14C14 12.8954 14.8954 12 16 12H28C29.1046 12 30 12.8954 30 14V26C30 27.1046 29.1046 28 28 28H20L16 32V28C14.8954 28 14 27.1046 14 26V14Z" 
+                              fill="white" class="message-bubble"/>
+                        
+                        <!-- SMS Text -->
+                        <text x="22" y="22" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SMS</text>
+                        
+                        <!-- Connection Dots -->
+                        <circle cx="18" cy="18" r="1.5" fill="#10B981"/>
+                        <circle cx="22" cy="18" r="1.5" fill="#10B981"/>
+                        <circle cx="26" cy="18" r="1.5" fill="#10B981"/>
+                        
+                        <!-- Gradient Definition -->
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#10B981"/>
+                                <stop offset="1" stop-color="#0EA5E9"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h1>SMS<span>Connect</span> India<span class="proprietorship-badge">LAUNCHING FEB 2026</span></h1>
+            </div>
+            
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#founder">Founder & CEO</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Pre-Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <span class="prelaunch-badge"><i class="fas fa-rocket"></i> PRE-LAUNCH PHASE</span>
+                <h2>Affordable Bulk SMS Services <span>Launching February 2026</span></h2>
+                <p>SMSConnect India is a proprietorship startup launching on <strong>February 1, 2026</strong>. We're preparing to deliver reliable, affordable, and high-performance bulk SMS solutions to businesses across India. Join our pre-launch community for early access!</p>
+                
+                <!-- Countdown Timer -->
+                <div class="countdown-container">
+                    <div class="countdown-title">Launching In:</div>
+                    <div class="countdown-timer" id="countdown">
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="days">00</div>
+                            <div class="countdown-label">Days</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="hours">00</div>
+                            <div class="countdown-label">Hours</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="minutes">00</div>
+                            <div class="countdown-label">Minutes</div>
+                        </div>
+                        <div class="countdown-unit">
+                            <div class="countdown-number" id="seconds">00</div>
+                            <div class="countdown-label">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="company-structure">
+                    <p><i class="fas fa-building"></i> <strong>Pre-Launch Proprietorship:</strong> Currently in pre-launch phase as a sole proprietorship. Preparing for official launch on <strong>February 1, 2026</strong> with competitive pricing and personalized service.</p>
+                    <p class="launch-date">Official Launch: February 1, 2026 | Pre-Registration Open Now</p>
+                </div>
+                
+                <!-- Early Bird Offer -->
+                <div class="early-bird-offer">
+                    <div class="early-bird-badge">EARLY BIRD</div>
+                    <h3>Pre-Launch Exclusive Offer</h3>
+                    <p>Pre-register before launch and get <strong>20% bonus SMS credits</strong> on your first recharge!</p>
+                    <p><strong>Limited to first 100 businesses</strong></p>
+                    <a href="#contact" class="cta-button" style="margin-top: 15px;">Pre-Register Now <i class="fas fa-user-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <span class="prelaunch-badge">COMING FEBRUARY 2026</span>
+                <h2>Complete Bulk SMS Solutions</h2>
+                <p>Launching on February 1, 2026, we'll provide agile, personalized SMS services with direct oversight from the proprietor.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-comment-sms"></i>
+                    <h3>Transactional SMS</h3>
+                    <p>High-priority SMS for OTPs, alerts, notifications, and transactional messages with 99%+ delivery rate and immediate delivery.</p>
+                    <p class="launch-date">Launch Price: ₹0.18/SMS</p>
+                </div>
+                
+                <div class="service-card new-offering">
+                    <div class="new-badge">LAUNCH OFFER</div>
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Promotional SMS</h3>
+                    <p>Cost-effective promotional SMS for marketing campaigns, offers, announcements, and customer engagement. DND compliant.</p>
+                    <p class="launch-date">Launch Price: ₹0.12/SMS</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-shield-check"></i>
+                    <h3>OTP & Authentication</h3>
+                    <p>Secure OTP delivery for authentication, verification, and security purposes with high reliability and instant delivery.</p>
+                    <p class="launch-date">Launch Price: ₹0.20/SMS</p>
+                </div>
+                
+                <div class="service-card new-offering">
+                    <div class="new-badge">Q2 2026</div>
+                    <i class="fas fa-robot"></i>
+                    <h3>AI-Powered SMS</h3>
+                    <p>Intelligent SMS scheduling and optimization using AI algorithms to maximize engagement and delivery rates.</p>
+                    <p class="launch-date">Coming Q2 2026</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>SMS Analytics Dashboard</h3>
+                    <p>Comprehensive analytics with real-time delivery reports, engagement metrics, and performance insights for data-driven decisions.</p>
+                    <p class="launch-date">Available at Launch</p>
+                </div>
+                
+                <div class="service-card">
+                    <i class="fas fa-plug"></i>
+                    <h3>API Integration</h3>
+                    <p>Easy REST API integration for automated SMS sending with detailed documentation and developer support.</p>
+                    <p class="launch-date">Free API Access at Launch</p>
+                </div>
+            </div>
+            
+            <!-- SMS Type Cards -->
+            <div class="sms-type-cards">
+                <div class="sms-type-card transactional">
+                    <div class="sms-type-header">
+                        <div class="sms-type-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div>
+                            <div class="sms-type-title">Transactional SMS</div>
+                            <div class="sms-type-rate">₹0.18 - ₹0.22 per SMS</div>
+                        </div>
+                    </div>
+                    <p>High priority delivery for OTPs, alerts, notifications, and transactional messages. No DND restrictions. 99%+ delivery guarantee.</p>
+                    <p class="launch-date"><strong>Available from February 1, 2026</strong></p>
+                </div>
+                
+                <div class="sms-type-card promotional">
+                    <div class="sms-type-header">
+                        <div class="sms-type-icon">
+                            <i class="fas fa-megaphone"></i>
+                        </div>
+                        <div>
+                            <div class="sms-type-title">Promotional SMS</div>
+                            <div class="sms-type-rate">₹0.12 - ₹0.16 per SMS</div>
+                        </div>
+                    </div>
+                    <p>Cost-effective marketing SMS for promotions, offers, announcements. DND compliant with automatic filtering of DND numbers.</p>
+                    <p class="launch-date"><strong>Available from February 1, 2026</strong></p>
+                </div>
+                
+                <div class="sms-type-card otp">
+                    <div class="sms-type-header">
+                        <div class="sms-type-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <div>
+                            <div class="sms-type-title">OTP Services</div>
+                            <div class="sms-type-rate">₹0.20 - ₹0.25 per SMS</div>
+                        </div>
+                    </div>
+                    <p>Dedicated high-reliability channel for OTP and authentication messages with instant delivery and 99.9% uptime.</p>
+                    <p class="launch-date"><strong>Available from February 1, 2026</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="about-startup" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <span class="prelaunch-badge">LAUNCH PRICING</span>
+                <h2>Pre-Launch Bulk SMS Plans</h2>
+                <p>Simple, straightforward pricing with no hidden charges. Pre-register now to lock in launch pricing for 12 months.</p>
+            </div>
+            
+            <div class="pricing-table">
+                <div class="pricing-header">
+                    <h3>Pre-Launch Exclusive Plans</h3>
+                    <p>Lock in these prices before February 1, 2026 launch</p>
+                </div>
+                
+                <div class="pricing-plans">
+                    <div class="pricing-plan">
+                        <div class="plan-name">Starter Plan</div>
+                        <div class="plan-price">₹999 <span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 5,000 SMS Credits</li>
+                            <li><i class="fas fa-check-circle"></i> 20p/SMS Launch Rate</li>
+                            <li><i class="fas fa-check-circle"></i> Basic Dashboard</li>
+                            <li><i class="fas fa-check-circle"></i> Email Support</li>
+                            <li><i class="fas fa-check-circle"></i> DND Compliance</li>
+                            <li><i class="fas fa-check-circle"></i> Pre-Launch Bonus: 1,000 Extra SMS</li>
+                        </ul>
+                        <button class="plan-button pre-register" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Pre-Register Now</button>
+                    </div>
+                    
+                    <div class="pricing-plan popular">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <div class="plan-name">Business Plan</div>
+                        <div class="plan-price">₹2,499 <span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 15,000 SMS Credits</li>
+                            <li><i class="fas fa-check-circle"></i> 16p/SMS Launch Rate</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced Dashboard</li>
+                            <li><i class="fas fa-check-circle"></i> Priority Support</li>
+                            <li><i class="fas fa-check-circle"></i> API Access</li>
+                            <li><i class="fas fa-check-circle"></i> Template Management</li>
+                            <li><i class="fas fa-check-circle"></i> Pre-Launch Bonus: 3,000 Extra SMS</li>
+                        </ul>
+                        <button class="plan-button pre-register" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Pre-Register Now</button>
+                    </div>
+                    
+                    <div class="pricing-plan">
+                        <div class="plan-name">Enterprise Plan</div>
+                        <div class="plan-price">₹4,999 <span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check-circle"></i> 35,000 SMS Credits</li>
+                            <li><i class="fas fa-check-circle"></i> 14p/SMS Launch Rate</li>
+                            <li><i class="fas fa-check-circle"></i> Premium Dashboard</li>
+                            <li><i class="fas fa-check-circle"></i> Direct Proprietor Support</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced API Features</li>
+                            <li><i class="fas fa-check-circle"></i> Dedicated Sender IDs</li>
+                            <li><i class="fas fa-check-circle"></i> Pre-Launch Bonus: 7,000 Extra SMS</li>
+                        </ul>
+                        <button class="plan-button pre-register" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Pre-Register Now</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="startup-story">
+                <div class="story-point">
+                    <i class="fas fa-bolt"></i>
+                    <div>
+                        <h3>Why Pre-Register?</h3>
+                        <p>• <strong>20% Bonus SMS</strong> on first recharge<br>
+                        • <strong>Lock in Launch Pricing</strong> for 12 months<br>
+                        • <strong>Early Access</strong> to platform before public launch<br>
+                        • <strong>Priority Support</strong> queue<br>
+                        • <strong>Direct Proprietor</strong> onboarding assistance</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-industry"></i>
+                    <div>
+                        <h3>Industries We'll Serve</h3>
+                        <p>• Banking & Finance (OTPs, Alerts)<br>
+                        • E-commerce (Order Updates)<br>
+                        • Education (Notifications)<br>
+                        • Healthcare (Appointment Reminders)<br>
+                        • Real Estate (Property Alerts)<br>
+                        • Marketing Agencies (Campaigns)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder & CEO Section -->
+    <section class="founder-section" id="founder">
+        <div class="container">
+            <div class="section-title">
+                <span class="prelaunch-badge">LEADERSHIP</span>
+                <h2>Meet Our Founder & CEO</h2>
+                <p>19+ Years of IT Experience Driving SMSConnect India's Vision</p>
+            </div>
+            
+            <div class="founder-profile">
+                <div class="founder-image">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                
+                <div class="founder-details">
+                    <div class="founder-title">Founder & Chief Executive Officer</div>
+                    <h2 class="founder-name">JAFFER SADHIK K.M.</h2>
+                    <div class="founder-subtitle">Information Technology Expert | SMS Product Specialist</div>
+                    
+                    <div class="founder-contact">
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>jsadhik009@gmail.com</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-9487660738</span>
+                        </div>
+                    </div>
+                    
+                    <div class="founder-quote">
+                        <i class="fas fa-quote-left"></i>
+                        With 19+ years in Information Technology, specializing in SMS gateways and scalable solutions, I'm building SMSConnect India to deliver reliable, affordable, and high-performance bulk SMS services that empower businesses across India.
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    
+                    <div class="founder-bio">
+                        <h4>Professional Summary</h4>
+                        <p>An experienced Java and SMS product expert with 19+ years in the Information Technology industry, specializing in developing and architecting scalable solutions using Spring Boot, Kafka, Redis, and Elasticsearch. Deep understanding of SMS gateways including Kannel, with extensive experience in leading the development of robust messaging platforms. Skilled in deploying applications using Docker and Kubernetes, with CI/CD pipeline expertise using Jenkins.</p>
+                        
+                        <p>With a focus on high-performance and distributed systems, I have successfully delivered enterprise-level solutions that meet business requirements and ensure high availability and reliability.</p>
+                        
+                        <div class="tech-stack">
+                            <h4>Technical Expertise</h4>
+                            <div class="tech-category">
+                                <h5>Languages & Frameworks</h5>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Java</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Kafka</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">Elasticsearch</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h5>SMS Gateway Technologies</h5>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Kannel</span>
+                                    <span class="tech-tag">SMPP Protocol</span>
+                                    <span class="tech-tag">SMSC Integration</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h5>DevOps & Deployment</h5>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                    <span class="tech-tag">Jenkins CI/CD</span>
+                                    <span class="tech-tag">AWS</span>
+                                    <span class="tech-tag">Maven</span>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-category">
+                                <h5>Databases</h5>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">MySQL</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Redis</span>
+                                    <span class="tech-tag">MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="experience-timeline">
+                            <h4>Professional Experience (19+ Years)</h4>
+                            
+                            <div class="experience-item">
+                                <div class="experience-duration">Feb 2023 - Present</div>
+                                <div class="experience-details">
+                                    <h5>Tech Lead & SMS Product Architect</h5>
+                                    <div class="company">Technowizards Pvt. Ltd.</div>
+                                    <div class="duration">1 Year+ | Full-time</div>
+                                    <p>Leading SMS gateway development and architecture projects</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <div class="experience-duration">Mar 2021 - Jan 2023</div>
+                                <div class="experience-details">
+                                    <h5>Senior Software Architect</h5>
+                                    <div class="company">Winnovature India Pvt Ltd</div>
+                                    <div class="duration">1 Year 11 Months</div>
+                                    <p>Architected scalable solutions for messaging platforms</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <div class="experience-duration">Jul 2020 - Feb 2021</div>
+                                <div class="experience-details">
+                                    <h5>SMS Broadcast Engineer</h5>
+                                    <div class="company">Tanla Digital Labs Private Limited</div>
+                                    <div class="duration">6 Months</div>
+                                    <p>Specialized in SMS broadcasting and gateway technologies</p>
+                                </div>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <div class="experience-duration">Feb 2006 - Jun 2020</div>
+                                <div class="experience-details">
+                                    <h5>Multiple Roles: Testing to DevOps</h5>
+                                    <div class="company">Karix Mobile Pvt. Ltd.</div>
+                                    <div class="duration">14 Years 4 Months</div>
+                                    <p>Progressed through various roles including Testing Engineer, Deployment Engineer, Billing Support Engineer, Application Support Engineer, SMS Broadcast Engineer, DevOps Engineer, JAVA Programmer, Software Engineer, Software Architect, Tech Lead, and Requirement Analysis Engineer</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-section">
+                            <h4>SMS Gateway Product Expertise</h4>
+                            <p><strong>UNITIA SMS Gateway Product:</strong> Extensive experience in building robust and scalable SMS Gateway solutions designed to handle high volumes of SMS traffic efficiently and reliably.</p>
+                            
+                            <div class="product-features">
+                                <div class="product-feature">
+                                    <i class="fas fa-bolt"></i>
+                                    <div>
+                                        <strong>High-Performance Messaging</strong>
+                                        <p>Leveraging Java & Spring Boot for concurrent requests and high throughput</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-feature">
+                                    <i class="fas fa-sync-alt"></i>
+                                    <div>
+                                        <strong>Real-Time Processing</strong>
+                                        <p>Utilizing Apache Kafka for real-time messaging and stream processing</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-feature">
+                                    <i class="fas fa-database"></i>
+                                    <div>
+                                        <strong>Efficient Data Storage</strong>
+                                        <p>Implementing Redis for caching and Elasticsearch for advanced search</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="product-feature">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div>
+                                        <strong>Legacy & Modern Integration</strong>
+                                        <p>Expertise in Kannel for SMSC interfacing with telecom operators</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="education-section">
+                            <h4>Educational Background</h4>
+                            <div class="education-grid">
+                                <div class="education-item">
+                                    <h5>B.E. Computer Science & Engineering</h5>
+                                    <p><strong>Institution:</strong> P.E.T. Engineering College, Vallioor</p>
+                                    <p><strong>University:</strong> Anna University, Chennai</p>
+                                    <p><strong>Year:</strong> 2005 | <strong>Score:</strong> 67%</p>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <h5>XII (HSC)</h5>
+                                    <p><strong>Institution:</strong> M.N.A HSC School, Tirunelveli</p>
+                                    <p><strong>Board:</strong> State Board, Tamil Nadu</p>
+                                    <p><strong>Year:</strong> 2001 | <strong>Score:</strong> 72.25%</p>
+                                </div>
+                                
+                                <div class="education-item">
+                                    <h5>X (SSLC)</h5>
+                                    <p><strong>Institution:</strong> M.N.A HSC School, Tirunelveli</p>
+                                    <p><strong>Board:</strong> State Board, Tamil Nadu</p>
+                                    <p><strong>Year:</strong> 1999 | <strong>Score:</strong> 83.80%</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="personal-details">
+                            <h4>Personal Details</h4>
+                            <div class="personal-grid">
+                                <div class="personal-item">
+                                    <i class="fas fa-birthday-cake"></i>
+                                    <span><strong>Date of Birth:</strong> 27th December 1982</span>
+                                </div>
+                                
+                                <div class="personal-item">
+                                    <i class="fas fa-venus-mars"></i>
+                                    <span><strong>Gender:</strong> Male</span>
+                                </div>
+                                
+                                <div class="personal-item">
+                                    <i class="fas fa-ring"></i>
+                                    <span><strong>Marital Status:</strong> Married</span>
+                                </div>
+                                
+                                <div class="personal-item">
+                                    <i class="fas fa-flag"></i>
+                                    <span><strong>Nationality:</strong> Indian</span>
+                                </div>
+                            </div>
+                            
+                            <div class="personal-grid" style="margin-top: 15px;">
+                                <div class="personal-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span><strong>Communication Address:</strong> No. 1/97, QuaitheMilleth 2nd Cross Street, Palavakkam, Chennai, TamilNadu, India – 600 041</span>
+                                </div>
+                                
+                                <div class="personal-item">
+                                    <i class="fas fa-home"></i>
+                                    <span><strong>Permanent Address:</strong> 2/126, New Street, Seydunganallur, Tuticorin District, TamilNadu, India – 628 809</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 25px; font-style: italic; color: var(--text-light);">
+                            <strong>Vision for SMSConnect India:</strong> "To leverage my 19+ years of SMS gateway expertise to build India's most reliable, affordable, and scalable bulk SMS service platform. We're not just sending messages - we're enabling business communications that drive growth, secure transactions, and enhance customer engagement across India."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Startup Section -->
+    <section class="services" id="about">
+        <div class="container">
+            <div class="section-title">
+                <span class="prelaunch-badge">OUR JOURNEY</span>
+                <h2>Building India's Most Reliable SMS Service</h2>
+                <p>Currently in pre-launch phase, preparing for official launch on <strong>February 1, 2026</strong>. We're building the foundation for affordable, reliable, and high-quality SMS solutions.</p>
+            </div>
+            
+            <div class="startup-story">
+                <div class="story-point">
+                    <i class="fas fa-lightbulb"></i>
+                    <div>
+                        <h3>The Vision (Late 2025)</h3>
+                        <p>Recognizing the need for affordable, reliable bulk SMS services in India. Most providers are either too expensive or have poor delivery rates. Planning our entry into the market.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h3>Proprietorship Setup (Jan 2026)</h3>
+                        <p>Registering as a sole proprietorship to maintain agility, offer competitive pricing, and provide direct, personalized service to every client from day one.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-rocket"></i>
+                    <div>
+                        <h3>Official Launch (Feb 1, 2026)</h3>
+                        <p>Official launch of SMSConnect India with our core bulk SMS services, focusing on reliability, affordability, and excellent customer support from the start.</p>
+                    </div>
+                </div>
+                
+                <div class="story-point">
+                    <i class="fas fa-bullseye"></i>
+                    <div>
+                        <h3>Future Roadmap (2026-2027)</h3>
+                        <p>Q2 2026: AI-Powered SMS features<br>
+                        Q3 2026: WhatsApp Business API integration<br>
+                        Q4 2026: International SMS services<br>
+                        2027: Voice SMS and advanced analytics</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Proprietorship Details Section -->
+            <div class="proprietorship-details">
+                <h3><i class="fas fa-file-contract"></i> Pre-Launch Proprietorship Details</h3>
+                <div class="proprietorship-info">
+                    <div class="proprietor-card">
+                        <h4>Business Structure</h4>
+                        <p><strong>Sole Proprietorship (Pre-Launch)</strong><br>
+                        Registration in progress for February 1, 2026<br>
+                        GST Registration: To be completed Jan 2026<br>
+                        MSME Registration: Planned for Q1 2026<br>
+                        TRAI DLT Registration: Scheduled for Jan 2026</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Founder & CEO Information</h4>
+                        <p><strong>Jaffer Sadhik K.M.</strong><br>
+                        Founder & CEO / Future Proprietor<br>
+                        19+ Years IT & SMS Experience<br>
+                        Email: jsadhik009@gmail.com<br>
+                        Phone: +91-9487660738</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Pre-Launch Advantages</h4>
+                        <p>• Competitive Launch Pricing<br>
+                        • Early Bird Bonuses<br>
+                        • Direct Founder Access<br>
+                        • Personalized Onboarding<br>
+                        • Priority Feature Requests</p>
+                    </div>
+                    
+                    <div class="proprietor-card">
+                        <h4>Launch Compliance</h4>
+                        <p>• All legal registrations before launch<br>
+                        • TRAI DLT compliance from day one<br>
+                        • Data privacy compliance<br>
+                        • Professional tax registration<br>
+                        • Complete regulatory adherence</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="timeline">
+                <h3 style="text-align: center; margin: 40px 0 20px; transition: color 0.3s ease;">Our Pre-Launch Timeline</h3>
+                <div class="timeline-item">
+                    <div class="timeline-date">November 2025</div>
+                    <div class="timeline-content">Market research and business planning for bulk SMS venture</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">December 2025</div>
+                    <div class="timeline-content">Technology platform development begins</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">January 2026</div>
+                    <div class="timeline-content">Proprietorship registration and pre-launch preparations</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">February 1, 2026</div>
+                    <div class="timeline-content">OFFICIAL LAUNCH: SMSConnect India goes live</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q2 2026</div>
+                    <div class="timeline-content">Advanced features rollout (AI-Powered SMS)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Q3 2026</div>
+                    <div class="timeline-content">WhatsApp Business API and service expansion</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-form">
+                <div class="section-title" style="text-align: left;">
+                    <span class="prelaunch-badge">PRE-REGISTER NOW</span>
+                    <h2>Join Our Pre-Launch Community</h2>
+                    <p>Pre-register before February 1, 2026 launch to get early access, special bonuses, and lock in launch pricing for 12 months.</p>
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="businessType" required>
+                            <option value="" disabled selected>Select Your Business Type</option>
+                            <option value="startup">Startup</option>
+                            <option value="sme">Small/Medium Business</option>
+                            <option value="enterprise">Enterprise</option>
+                            <option value="ecommerce">E-commerce</option>
+                            <option value="banking">Banking/Finance</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="marketing">Marketing Agency</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="smsNeed" required>
+                            <option value="" disabled selected>Select Expected SMS Requirement</option>
+                            <option value="transactional">Transactional SMS (OTP, Alerts)</option>
+                            <option value="promotional">Promotional SMS (Marketing)</option>
+                            <option value="both">Both Transactional & Promotional</option>
+                            <option value="otp">OTP Services Only</option>
+                            <option value="api">API Integration</option>
+                            <option value="custom">Custom Requirement</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="planInterest" required>
+                            <option value="" disabled selected>Select Plan You're Interested In</option>
+                            <option value="starter">Starter Plan (₹999/month)</option>
+                            <option value="business">Business Plan (₹2,499/month)</option>
+                            <option value="enterprise">Enterprise Plan (₹4,999/month)</option>
+                            <option value="notsure">Not Sure - Need Consultation</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Tell us about your expected SMS usage or any specific requirements you have..." required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Pre-Register for Launch <i class="fas fa-user-plus"></i></button>
+                </form>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Connect During Pre-Launch</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Future Registered Office</h4>
+                            <p>SMSConnect India (Proprietorship)<br>
+                            1/97 Quaidemilleth 2nd Cross Street,<br>
+                            Palavakkam, Chennai-600041<br>
+                            Tamil Nadu, India</p>
+                            <p style="font-size: 14px; margin-top: 5px;"><em>Office operational from February 1, 2026</em></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Pre-Launch Contact</h4>
+                            <p>+91-9487660738</p>
+                            <p style="font-size: 14px; margin-top: 5px;">Direct contact with Founder & CEO Jaffer Sadhik K.M.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Pre-Launch Email</h4>
+                            <p>jsadhik009@gmail.com</p>
+                            <p style="font-size: 14px; margin-top: 5px;">For pre-registration and technical inquiries</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <div>
+                            <h4>Launch Schedule</h4>
+                            <p><strong>Pre-Launch Phase:</strong> Now - January 31, 2026<br>
+                            <strong>Official Launch:</strong> February 1, 2026<br>
+                            <strong>Service Start:</strong> February 1, 2026</p>
+                            <p style="font-size: 14px; margin-top: 5px;">Pre-registered users get early access</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="proprietorship-info-footer">
+                    <p><i class="fas fa-info-circle"></i> <strong>Pre-Launch Status:</strong> Currently accepting pre-registrations for our February 1, 2026 launch. All pre-registered businesses will receive exclusive launch bonuses and priority onboarding assistance directly from the founder with 19+ years of SMS expertise.</p>
+                </div>
+                
+                <h4 style="margin-top: 30px;">Follow Our Pre-Launch Journey</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pre-Launch Blog"><i class="fas fa-blog"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <!-- Use the same SVG logo in footer -->
+                        <div class="logo-svg">
+                            <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="22" cy="22" r="22" fill="url(#footer-gradient)"/>
+                                <path d="M14 14C14 12.8954 14.8954 12 16 12H28C29.1046 12 30 12.8954 30 14V26C30 27.1046 29.1046 28 28 28H20L16 32V28C14.8954 28 14 27.1046 14 26V14Z" fill="white"/>
+                                <text x="22" y="22" text-anchor="middle" fill="#2563EB" font-family="Arial, sans-serif" font-size="10" font-weight="bold">SMS</text>
+                                <circle cx="18" cy="18" r="1.5" fill="#10B981"/>
+                                <circle cx="22" cy="18" r="1.5" fill="#10B981"/>
+                                <circle cx="26" cy="18" r="1.5" fill="#10B981"/>
+                                <defs>
+                                    <linearGradient id="footer-gradient" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#10B981"/>
+                                        <stop offset="1" stop-color="#0EA5E9"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h1>SMS<span>Connect</span> India</h1>
+                    </div>
+                    <p>A proprietorship startup preparing to launch on <strong>February 1, 2026</strong>, providing affordable, reliable, and high-performance bulk SMS solutions to businesses across India. Founded by an IT expert with 19+ years of SMS gateway experience.</p>
+                    <div class="founded-date"><i class="fas fa-calendar-alt"></i> Launching on February 1, 2026 | Pre-Registration Open</div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Coming Services</h4>
+                    <ul>
+                        <li><a href="#services">Transactional SMS</a></li>
+                        <li><a href="#services">Promotional SMS</a></li>
+                        <li><a href="#services">OTP Services</a></li>
+                        <li><a href="#services">SMS API</a></li>
+                        <li><a href="#services">SMS Analytics</a></li>
+                        <li><a href="#pricing">Pre-Launch Plans</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Pre-Launch Info</h4>
+                    <ul>
+                        <li><a href="#founder">Founder & CEO</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#contact">Pre-Register</a></li>
+                        <li><a href="#">Launch Timeline</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025-2026 SMSConnect India (Pre-Launch Proprietorship). All Rights Reserved. | Founder & CEO: Jaffer Sadhik K.M. (19+ Years IT Experience) | Launch Date: February 1, 2026 | Email: jsadhik009@gmail.com | Phone: +91-9487660738</p>
+                <p style="margin-top: 10px; font-size: 13px;">Building India's most reliable bulk SMS service with 19+ years of SMS gateway expertise and direct founder attention</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or prefer-color-scheme
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            
+            // Check system preference
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+        
+        // Apply theme
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.add('dark-mode');
+            } else {
+                body.classList.remove('dark-mode');
+            }
+            localStorage.setItem('theme', theme);
+        };
+        
+        // Initialize theme
+        const initTheme = () => {
+            const preferredTheme = getPreferredTheme();
+            applyTheme(preferredTheme);
+            
+            // Update toggle button text for screen readers
+            const toggleText = preferredTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', toggleText);
+        };
+        
+        // Toggle theme
+        const toggleTheme = () => {
+            const currentTheme = body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+            
+            // Update toggle button text for screen readers
+            const toggleText = newTheme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode';
+            themeToggle.setAttribute('aria-label', toggleText);
+            
+            // Add animation effect
+            themeToggle.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                themeToggle.style.transform = 'scale(1)';
+            }, 150);
+        };
+        
+        // Listen for system theme changes
+        const colorSchemeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        colorSchemeQuery.addEventListener('change', (e) => {
+            // Only apply system preference if user hasn't manually set a preference
+            if (!localStorage.getItem('theme')) {
+                const newTheme = e.matches ? 'dark' : 'light';
+                applyTheme(newTheme);
+            }
+        });
+        
+        // Initialize theme on page load
+        document.addEventListener('DOMContentLoaded', initTheme);
+        
+        // Add click event to theme toggle
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            
+            // Change icon based on menu state
+            const icon = this.querySelector('i');
+            if (nav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            });
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const isMobile = window.innerWidth < 768;
+                    const offset = isMobile ? 70 : 80;
+                    
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Countdown Timer to February 1, 2026
+        function updateCountdown() {
+            const launchDate = new Date('February 1, 2026 00:00:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+            
+            if (timeLeft > 0) {
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                // Launch time reached
+                document.getElementById('countdown').innerHTML = '<div style="font-size: 24px; font-weight: bold;">🚀 LAUNCHED! 🚀</div>';
+                document.querySelector('.prelaunch-badge').textContent = 'LAUNCHED FEB 2026';
+                document.querySelector('.prelaunch-badge').style.background = 'linear-gradient(135deg, #10b981, #34d399)';
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+        
+        // Pre-registration form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const businessType = document.getElementById('businessType').value;
+            const smsNeed = document.getElementById('smsNeed').value;
+            const planInterest = document.getElementById('planInterest').value;
+            const message = document.getElementById('message').value;
+            
+            // Validation
+            if (!name || !email || !phone || !businessType || !smsNeed || !planInterest || !message) {
+                alert('Please fill in all fields to pre-register for our February 2026 launch.');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Pre-Registration...';
+            submitBtn.disabled = true;
+            
+            // In a real implementation, this would send data to a server
+            setTimeout(() => {
+                const isMobile = window.innerWidth < 768;
+                const successMessage = isMobile 
+                    ? `✅ Pre-registration successful ${name}! You'll receive:\n• Confirmation email with launch updates\n• 20% bonus SMS credits voucher\n• Early access notification before February 1, 2026` 
+                    : `✅ EXCELLENT ${name}! Your pre-registration for our February 1, 2026 launch is confirmed!\n\n📧 You'll receive:\n• Confirmation email with launch timeline\n• Exclusive 20% bonus SMS credits voucher\n• Early platform access invitation\n• Direct onboarding assistance from our founder with 19+ years SMS experience\n\n📱 Plan Selected: ${planInterest}\n📞 We'll contact you at ${phone} in January 2026 for onboarding\n\nThank you for joining our pre-launch community!`;
+                
+                alert(successMessage);
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                
+                // Scroll to thank you message
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            }, 1500);
+        });
+        
+        // Handle resize events
+        window.addEventListener('resize', function() {
+            if (window.innerWidth >= 768 && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+                mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        });
+        
+        // Proprietorship info toggle for mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const proprietorCards = document.querySelectorAll('.proprietor-card');
+            if (window.innerWidth < 768) {
+                proprietorCards.forEach(card => {
+                    card.addEventListener('click', function() {
+                        this.classList.toggle('expanded');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
