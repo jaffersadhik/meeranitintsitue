@@ -3,127 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jaffer Home Mess</title>
+<title>M.N.K. Store - Price List (ECR & OMR)</title>
 
 <style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f5f5f5;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f5f5f5;
 }
 
-header{
-background:#2e7d32;
-color:white;
-text-align:center;
-padding:20px;
+header {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
 
-.container{
-padding:15px;
+header p {
+    margin: 5px 0;
 }
 
-.card{
-background:white;
-padding:15px;
-margin-bottom:15px;
-border-radius:8px;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+h2 {
+    background: #27ae60;
+    color: white;
+    padding: 10px;
+    margin: 0;
 }
 
-h2{
-color:#2e7d32;
-margin-top:0;
+.container {
+    padding: 10px;
 }
 
-ul{
-padding-left:20px;
-line-height:28px;
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.price{
-float:right;
-font-weight:bold;
-color:#444;
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
 }
 
-.contact{
-text-align:center;
-font-size:18px;
+th {
+    background: #34495e;
+    color: white;
 }
 
-.callbtn{
-display:block;
-background:#2e7d32;
-color:white;
-text-decoration:none;
-padding:12px;
-text-align:center;
-border-radius:6px;
-margin-top:10px;
+tr:hover {
+    background: #f1f1f1;
 }
 
-footer{
-text-align:center;
-padding:10px;
-background:#ddd;
-font-size:14px;
+/* Highlight English text */
+.eng {
+    color: #777;
+    font-size: 12px;
+    display: block;
 }
 
+/* Sticky Call Button */
+.call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>Jaffer Home Mess</h1>
-<p>Healthy & Tasty Homemade Food</p>
+    <h1>M.N.K. Store</h1>
+    <p>ECR & OMR Sector Price List</p>
+    <p>📞 Contact: 9487660738</p>
 </header>
 
 <div class="container">
 
-<div class="card">
-<h2>Morning Menu</h2>
-<ul>
-<li>Neesh Thanni Sorru <span class="price">₹30</span></li>
-</ul>
+<h2>மசாலா & மளிகை பொருட்கள் (Spices & Grocery)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>மஞ்சள்<span class="eng">Turmeric</span></td><td>₹80/kg</td></tr>
+<tr><td>கடுகு<span class="eng">Mustard Seeds</span></td><td>₹120/kg</td></tr>
+<tr><td>சீரகம்<span class="eng">Cumin Seeds</span></td><td>₹400/kg</td></tr>
+<tr><td>பெருஞ்சீரகம்<span class="eng">Fennel Seeds</span></td><td>₹300/kg</td></tr>
+<tr><td>வெந்தயம்<span class="eng">Fenugreek</span></td><td>₹100/kg</td></tr>
+<tr><td>மிளகு<span class="eng">Black Pepper</span></td><td>₹650/kg</td></tr>
+<tr><td>கிராம்பு<span class="eng">Cloves</span></td><td>₹900/kg</td></tr>
+<tr><td>சுருள்பட்டை<span class="eng">Cinnamon</span></td><td>₹500/kg</td></tr>
+<tr><td>ஏலக்காய்<span class="eng">Cardamom</span></td><td>₹1800/kg</td></tr>
+<tr><td>அன்னாச்சி பூ<span class="eng">Star Anise</span></td><td>₹200/kg</td></tr>
+
+</table>
+
+<h2>பருப்புகள் & பயிறுகள் (Pulses & Lentils)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>துவரம் பருப்பு<span class="eng">Toor Dal</span></td><td>₹160/kg</td></tr>
+<tr><td>உளுந்தம் பருப்பு<span class="eng">Urad Dal</span></td><td>₹140/kg</td></tr>
+<tr><td>பாசி பருப்பு<span class="eng">Moong Dal</span></td><td>₹130/kg</td></tr>
+<tr><td>பாசி பயிறு<span class="eng">Green Gram</span></td><td>₹120/kg</td></tr>
+<tr><td>தட்டாம் பயிறு<span class="eng">Horse Gram</span></td><td>₹110/kg</td></tr>
+<tr><td>கருப்பு கொண்டை கடலை<span class="eng">Black Chickpeas</span></td><td>₹90/kg</td></tr>
+<tr><td>வெள்ளை கொண்டை கடலை<span class="eng">White Chickpeas</span></td><td>₹100/kg</td></tr>
+
+</table>
+
+<h2>எண்ணெய் வகைகள் (Oils)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>கடலை எண்ணெய்<span class="eng">Groundnut Oil</span></td><td>₹180/L</td></tr>
+<tr><td>நல்லெண்ணெய்<span class="eng">Sesame Oil</span></td><td>₹250/L</td></tr>
+<tr><td>பாமாயில்<span class="eng">Palm Oil</span></td><td>₹120/L</td></tr>
+<tr><td>தேங்காய் எண்ணெய்<span class="eng">Coconut Oil</span></td><td>₹220/L</td></tr>
+
+</table>
+
+<h2>அரிசி வகைகள் (Rice)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>பாஸ்மதி அரிசி<span class="eng">Basmati Rice</span></td><td>₹120/kg</td></tr>
+<tr><td>பிரியாணி அரிசி<span class="eng">Biryani Rice</span></td><td>₹90/kg</td></tr>
+<tr><td>இட்லி அரிசி<span class="eng">Idli Rice</span></td><td>₹60/kg</td></tr>
+<tr><td>சாப்பாட்டு அரிசி<span class="eng">Regular Rice</span></td><td>₹55/kg</td></tr>
+
+</table>
+
+<h2>உலர் பழங்கள் (Dry Fruits)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>முந்திரி<span class="eng">Cashew Nuts</span></td><td>₹900/kg</td></tr>
+<tr><td>கிஸ்மிஸ்<span class="eng">Raisins</span></td><td>₹350/kg</td></tr>
+<tr><td>பேரிச்சம்பழம்<span class="eng">Dates</span></td><td>₹300/kg</td></tr>
+<tr><td>பாதம்<span class="eng">Almonds</span></td><td>₹850/kg</td></tr>
+<tr><td>பிஸ்தா<span class="eng">Pistachios</span></td><td>₹1000/kg</td></tr>
+<tr><td>வால்நட்<span class="eng">Walnuts</span></td><td>₹1200/kg</td></tr>
+
+</table>
+
+<h2>மற்றவை (Others)</h2>
+<table>
+<tr><th>பொருள் (Item)</th><th>விலை (₹)</th></tr>
+
+<tr><td>டீ தூள்<span class="eng">Tea Powder</span></td><td>₹250/kg</td></tr>
+<tr><td>காபி தூள்<span class="eng">Coffee Powder</span></td><td>₹400/kg</td></tr>
+<tr><td>சோப்பு பவுடர்<span class="eng">Detergent Powder</span></td><td>₹70/kg</td></tr>
+<tr><td>வறுத்த நிலக்கடலை<span class="eng">Roasted Groundnuts</span></td><td>₹120/kg</td></tr>
+<tr><td>கடலை மிட்டாய்<span class="eng">Peanut Candy</span></td><td>₹150/kg</td></tr>
+<tr><td>புளி<span class="eng">Tamarind</span></td><td>₹180/kg</td></tr>
+<tr><td>நெய்<span class="eng">Ghee</span></td><td>₹600/kg</td></tr>
+<tr><td>தேங்காய்<span class="eng">Coconut</span></td><td>₹40/pc</td></tr>
+
+</table>
+
 </div>
 
-<div class="card">
-<h2>Lunch Menu</h2>
-<ul>
-<li>Curd Rice <span class="price">₹40</span></li>
-<li>Lemon Rice <span class="price">₹40</span></li>
-<li>Tamarind Rice <span class="price">₹40</span></li>
-<li>Tomato Rice <span class="price">₹40</span></li>
-<li>Vegetable Rice <span class="price">₹50</span></li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Dinner Menu</h2>
-<ul>
-<li>Idly (4 pcs) <span class="price">₹30</span></li>
-</ul>
-</div>
-
-<div class="card contact">
-<h2>Contact</h2>
-<p><b>Jaffer Sadhik</b></p>
-<p>📞 9487660738</p>
-
-<a class="callbtn" href="tel:9487660738">
-Call Now
-</a>
-
-</div>
-
-</div>
-
-<footer>
-© 2026 Jaffer Home Mess
-</footer>
+<a href="tel:9487660738" class="call-btn">📞 Call</a>
 
 </body>
 </html>
